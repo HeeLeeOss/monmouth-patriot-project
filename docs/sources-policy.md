@@ -10,14 +10,22 @@ policy; [`sources/allowlist.yml`](../sources/allowlist.yml) is the list it gover
    baseline; and a **status**: `approved`, `pending` or `rejected`.
 2. **Only the rights reviewer approves.** An entry stays `pending` until the rights reviewer (named in the project
    plan) decides it, and records their name and the date (`reviewer`, `decidedOn`) in their own commit. Nobody else
-   changes a status, and an automated tool never does.
-3. **Nothing pending or rejected is cited.** The test suite runs `scripts/check-sources.ts` over everything in
-   `src/content/` and `data/roster.csv`: any cited source id whose entry is not `approved` fails CI. A cited id
-   belongs to the entry it equals or extends with a hyphen, so `stryker-1872-p123` belongs to `stryker-1872`.
-4. **Decide per copy, not per record.** A record can be public domain while the scan, index or transcription of it
-   that a vendor sells is not. The entry names the copy, and covers only that copy.
-5. **Order of work.** The roster task starts only once `stryker-1872` is approved; the places task only once
-   `usgs-gnis` and `hmdb` are approved.
+   approves, and an automated tool never changes a status. The schema refuses an approval without a reviewer.
+3. **Rejections by project policy are labelled as such.** The seven rejections below were set by the project's own
+   plan and task, not by a reviewer's decision, so their entries record `policy` (where that policy is) instead of
+   `reviewer`. The rights reviewer may confirm them in their own commit, and may reject further sources.
+4. **Nothing pending or rejected is cited.** The test suite runs `scripts/check-sources.ts` over everything in
+   `src/content/` and `data/roster.csv`, including the ids of source records themselves: any source id whose entry
+   is not `approved` fails CI. The check fails closed: a file it cannot read (no frontmatter, invalid JSON, a roster
+   without a `sourceId` column, an unknown file type) is reported, not skipped.
+5. **One citation, one entry.** A source id is either an entry's id, or that id, a double hyphen and a local part
+   naming the page or document: `stryker-1872--p123` belongs to `stryker-1872` and to nothing else. Entry ids never
+   contain a double hyphen.
+6. **Decide per copy, not per record.** A record can be public domain while the scan, index or transcription of it
+   that a vendor sells is not. The entry names the copy, and covers only that copy; another edition or copy of the
+   same work needs its own entry.
+7. **Order of work.** The roster task starts only once `stryker-1872` is approved; the places task only once
+   `usgs-gnis` and `hmdb` are approved. Until then the check fails on any roster row or place that cites them.
 
 ## Rejected as sources of copied data
 

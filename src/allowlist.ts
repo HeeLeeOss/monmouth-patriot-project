@@ -40,17 +40,22 @@ export const entrySchema = z
       accuracyBaseline: z.string().trim().min(1),
     }),
     status: z.enum(STATUSES),
+    /** The rights reviewer who decided. Approval is always theirs. */
     reviewer: z.string().trim().min(1).optional(),
+    /** For a rejection fixed by the project's own policy rather than a reviewer's decision: where that policy is. */
+    policy: z.string().trim().min(1).optional(),
     decidedOn: isoDate.optional(),
   })
   .superRefine((e, ctx) => {
     if (e.status === "pending") {
-      if (e.reviewer !== undefined || e.decidedOn !== undefined)
+      if (e.reviewer !== undefined || e.policy !== undefined || e.decidedOn !== undefined)
         ctx.addIssue({ code: "custom", path: ["status"], message: "a pending entry records no decision" });
       return;
     }
-    if (e.reviewer === undefined)
-      ctx.addIssue({ code: "custom", path: ["reviewer"], message: `an ${e.status} entry names who decided` });
+    if (e.status === "approved" && (e.reviewer === undefined || e.policy !== undefined))
+      ctx.addIssue({ code: "custom", path: ["reviewer"], message: "only the rights reviewer approves a source" });
+    if (e.status === "rejected" && (e.reviewer === undefined) === (e.policy === undefined))
+      ctx.addIssue({ code: "custom", path: ["reviewer"], message: "a rejected entry names either the reviewer or the policy" });
     if (e.decidedOn === undefined)
       ctx.addIssue({ code: "custom", path: ["decidedOn"], message: `an ${e.status} entry records the date` });
   });
@@ -71,10 +76,11 @@ export const allowlistSchema = z
 export const parseAllowlist = (text: string): Entry[] => allowlistSchema.parse(parse(text)).sources;
 
 /**
- * The entry a cited source id belongs to: the entry whose id equals it, or the longest entry id that it extends
- * with a hyphen (`stryker-1872-p123` belongs to `stryker-1872`).
+ * The one entry a cited source id belongs to. A citation is either an entry's id itself, or that id, a double hyphen
+ * and a local part naming the page or document: `stryker-1872--p123` belongs to `stryker-1872`. Entry ids never
+ * contain a double hyphen, so a citation names exactly one entry, and a different edition needs its own entry.
  */
-export const entryFor = (entries: Entry[], sourceId: string): Entry | undefined =>
-  entries
-    .filter((e) => sourceId === e.id || sourceId.startsWith(`${e.id}-`))
-    .sort((a, b) => b.id.length - a.id.length)[0];
+export const entryFor = (entries: Entry[], sourceId: string): Entry | undefined => {
+  const entryId = sourceId.split("--")[0];
+  return entries.find((e) => e.id === entryId);
+};

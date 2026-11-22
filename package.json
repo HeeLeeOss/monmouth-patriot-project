@@ -16,10 +16,10 @@
   },
   "dependencies": {
     "@astrojs/mdx": "8.1.6",
-    "astro": "7.4.13",
-    "yaml": "2.9.1"
+    "astro": "7.4.13"
   },
   "devDependencies": {
-    "vitest": "5.1.1"
+    "vitest": "5.1.1",
+    "yaml": "2.9.1"
   }
 }

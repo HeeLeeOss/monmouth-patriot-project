@@ -49,6 +49,15 @@ describe("allow-list schema (AC-05)", () => {
     expect(entrySchema.safeParse(entry({ status: "approved", reviewer: "A Reviewer", decidedOn: "2027-01-05" })).success).toBe(true);
   });
 
+  it("accepts a rejection decided by project policy, naming the policy, instead of a reviewer", () => {
+    expect(entrySchema.safeParse(entry({ status: "rejected", policy: "Task X AC-07", decidedOn: "2026-11-22" })).success).toBe(true);
+    expect(entrySchema.safeParse(entry({ status: "rejected", decidedOn: "2026-11-22" })).success).toBe(false);
+  });
+
+  it("never lets project policy approve a source: approval is the rights reviewer's", () => {
+    expect(entrySchema.safeParse(entry({ status: "approved", policy: "Task X", decidedOn: "2026-11-22" })).success).toBe(false);
+  });
+
   it("refuses a decision recorded on a pending entry", () => {
     expect(entrySchema.safeParse(entry({ reviewer: "A Reviewer", decidedOn: "2027-01-05" })).success).toBe(false);
   });
@@ -67,6 +76,8 @@ describe("rejected sources (AC-07)", () => {
 
   it.each(rejected)("%s has a rejected entry with its reason", (id) => {
     expect(byId[id]?.status).toBe("rejected");
+    expect(byId[id]?.policy).toMatch(/AC-07/);
+    expect(byId[id]?.reviewer).toBeUndefined();
     expect(byId[id]?.rights.analysis.length).toBeGreaterThan(20);
   });
 
@@ -82,6 +93,11 @@ describe("the four first sources (AC-08)", () => {
   it.each(["stryker-1872", "nara-m804", "usgs-gnis", "hmdb"])("%s is analysed", (id) => {
     expect(byId[id], id).toBeDefined();
     expect(byId[id]!.rights.analysis.length).toBeGreaterThan(80);
+  });
+
+  it.each(["stryker-1872", "nara-m804", "usgs-gnis", "hmdb"])("%s is left pending for the rights reviewer", (id) => {
+    expect(byId[id]!.status).toBe("pending");
+    expect(byId[id]!.reviewer).toBeUndefined();
   });
 });
 
@@ -104,29 +120,69 @@ describe("source check (AC-06)", () => {
     JSON.stringify({ id: "huddy-park", historicName: { variants: [{ text: "Huddy Park", sourceIds, grade: "proved" }] } });
 
   it("fails on a content file that cites a pending source", () => {
-    const root = repo([entry()], { "src/content/places/huddy-park.json": place(["stryker-1872-p10"]) });
+    const root = repo([entry()], { "src/content/places/huddy-park.json": place(["stryker-1872--p10"]) });
     const problems = checkSources(root);
     expect(problems).toEqual([
-      { file: "src/content/places/huddy-park.json", sourceId: "stryker-1872-p10", reason: "source stryker-1872 is pending" },
+      { file: "src/content/places/huddy-park.json", sourceId: "stryker-1872--p10", reason: "source stryker-1872 is pending" },
     ]);
   });
 
   it("passes when every cited source belongs to an approved entry", () => {
-    const root = repo([approved], { "src/content/places/huddy-park.json": place(["stryker-1872-p10", "stryker-1872"]) });
+    const root = repo([approved], { "src/content/places/huddy-park.json": place(["stryker-1872--p10", "stryker-1872"]) });
     expect(checkSources(root)).toEqual([]);
   });
 
   it("fails on a source the list does not have", () => {
-    const root = repo([approved], { "src/content/places/huddy-park.json": place(["hmdb-12345"]) });
-    expect(checkSources(root)[0]?.reason).toBe("source hmdb-12345 is not on the allow-list");
+    const root = repo([approved], { "src/content/places/huddy-park.json": place(["hmdb--12345"]) });
+    expect(checkSources(root)[0]?.reason).toBe("source hmdb--12345 is not on the allow-list");
   });
 
   it("checks MDX frontmatter and roster rows too", () => {
     const root = repo([entry()], {
-      "src/content/patriots/a.mdx": "---\nid: smith-john-1745\nname:\n  variants:\n    - text: John Smith\n      sourceIds: [stryker-1872-p3]\n      grade: lead\nstatus: lead\n---\nText.\n",
+      "src/content/patriots/a.mdx": "---\nid: smith-john-1745\nname:\n  variants:\n    - text: John Smith\n      sourceIds: [stryker-1872--p3]\n      grade: lead\nstatus: lead\n---\nText.\n",
       "data/roster.csv": "rosterId,nameAsWritten,sourceId,page\nr1,John Smith,stryker-1872,3\n",
     });
     expect(checkSources(root).map((p) => p.file).sort()).toEqual(["data/roster.csv", "src/content/patriots/a.mdx"]);
+  });
+
+  it("ties a citation to exactly one entry: the id itself, or the id then -- and a local part", () => {
+    const nara = entry({ id: "nara", status: "approved", reviewer: "R", decidedOn: "2027-01-05" });
+    const root = repo([approved, nara], {
+      "src/content/places/a.json": place(["nara-m804--s1234", "stryker-1872-reprint-1967", "stryker-1872--p1", "nara"]),
+    });
+    expect(checkSources(root).map((p) => p.sourceId)).toEqual(["nara-m804--s1234", "stryker-1872-reprint-1967"]);
+  });
+
+  it("checks the ids of source records themselves", () => {
+    const root = repo([entry()], { "src/content/sources/s.json": JSON.stringify({ id: "stryker-1872--p3" }) });
+    expect(checkSources(root)).toEqual([
+      { file: "src/content/sources/s.json", sourceId: "stryker-1872--p3", reason: "source stryker-1872 is pending" },
+    ]);
+  });
+
+  it("fails closed on MDX it cannot read, including a byte-order mark before the frontmatter", () => {
+    const fm = ["---", "id: smith-john-1745", "name:", "  variants:", "    - text: J", "      sourceIds: [stryker-1872--p3]", "      grade: lead", "---", ""].join("\n");
+    const root = repo([entry()], { "src/content/patriots/bom.mdx": "﻿" + fm, "src/content/patriots/none.mdx": "No frontmatter.\n" });
+    const found = checkSources(root).map((p) => `${p.file}: ${p.reason}`).sort();
+    expect(found).toEqual([
+      "src/content/patriots/bom.mdx: source stryker-1872 is pending",
+      "src/content/patriots/none.mdx: no frontmatter could be read",
+    ]);
+  });
+
+  it("reads the roster as real CSV: quoted fields, a quoted header, a byte-order mark", () => {
+    const root = repo([entry()], {
+      "data/roster.csv": '﻿"rosterId","nameAsWritten","sourceId"\nr1,"Smith, John",stryker-1872--p3\n',
+    });
+    expect(checkSources(root)).toEqual([
+      { file: "data/roster.csv", sourceId: "stryker-1872--p3", reason: "source stryker-1872 is pending" },
+    ]);
+  });
+
+  it("fails closed on a roster with no sourceId column, and on a content file of another type", () => {
+    const root = repo([approved], { "data/roster.csv": "rosterId,name\nr1,John\n", "src/content/places/x.yaml": "id: x\n" });
+    const found = checkSources(root).map((p) => `${p.file}: ${p.reason}`).sort();
+    expect(found).toEqual(["data/roster.csv: no sourceId column", "src/content/places/x.yaml: not a content file type the check can read"]);
   });
 
   it("finds nothing wrong in this repository", () => {
