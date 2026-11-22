@@ -11,7 +11,7 @@ import { entryFor, parseAllowlist } from "../src/allowlist.ts";
 
 export type Problem = { file: string; sourceId: string; reason: string };
 
-const stripBom = (text: string) => text.replace(/^﻿/, "");
+const stripBom = (text: string) => text.replace(/^\uFEFF/, "");
 
 /** Every value under a `sourceIds` or `sourceId` key, at any depth, whether a string or a list. */
 const citedIn = (data: unknown, out: string[] = []): string[] => {

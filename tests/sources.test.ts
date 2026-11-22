@@ -162,7 +162,7 @@ describe("source check (AC-06)", () => {
 
   it("fails closed on MDX it cannot read, including a byte-order mark before the frontmatter", () => {
     const fm = ["---", "id: smith-john-1745", "name:", "  variants:", "    - text: J", "      sourceIds: [stryker-1872--p3]", "      grade: lead", "---", ""].join("\n");
-    const root = repo([entry()], { "src/content/patriots/bom.mdx": "﻿" + fm, "src/content/patriots/none.mdx": "No frontmatter.\n" });
+    const root = repo([entry()], { "src/content/patriots/bom.mdx": "\uFEFF" + fm, "src/content/patriots/none.mdx": "No frontmatter.\n" });
     const found = checkSources(root).map((p) => `${p.file}: ${p.reason}`).sort();
     expect(found).toEqual([
       "src/content/patriots/bom.mdx: source stryker-1872 is pending",
@@ -172,7 +172,7 @@ describe("source check (AC-06)", () => {
 
   it("reads the roster as real CSV: quoted fields, a quoted header, a byte-order mark", () => {
     const root = repo([entry()], {
-      "data/roster.csv": '﻿"rosterId","nameAsWritten","sourceId"\nr1,"Smith, John",stryker-1872--p3\n',
+      "data/roster.csv": '\uFEFF"sourceId","rosterId","nameAsWritten"\nstryker-1872--p3,r1,"Smith, John"\n',
     });
     expect(checkSources(root)).toEqual([
       { file: "data/roster.csv", sourceId: "stryker-1872--p3", reason: "source stryker-1872 is pending" },
