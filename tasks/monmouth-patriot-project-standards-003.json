@@ -1,0 +1,32 @@
+{
+  "id": "monmouth-patriot-project-standards-003",
+  "title": "Research standards written fresh: evidence tags and grades with fixed wording, citations, transcription, prose voice, privacy",
+  "project": "monmouth-patriot-project",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "high",
+  "domain": [
+    "education",
+    "genealogy",
+    "open-history",
+    "public-data"
+  ],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The Monmouth Patriot Project is a public-domain (Unlicense, data also CC0) record of the Revolutionary War patriots connected to Monmouth County, New Jersey, built towards the Battle of Monmouth's 250th anniversary on June 28, 2028. It starts from names (a master roster) and places (a namesake inventory), every claim cited to a primary source at page level. Every claim carries an evidence grade whose wording the build checks, so the standards come before any roster row or profile. Depends on foundation-001.",
+  "objective": "Write docs/standards/ as new text: citation guide, evidence rules with a machine-readable grade-wording table, transcription conventions, prose voice and privacy, plus a test that reads the table.",
+  "acceptanceCriteria": [
+    "AC-09: evidence grades Proved, Probable, Possible, Lead, Unsupported and Disproved each have fixed wording in docs/standards/grades.json ('was' only for Proved, 'probably' for Probable), and a test reads and checks the table.",
+    "AC-10: the transcription conventions ([ ] editorial, [?] uncertain, spelling as written, a person's check against the image before citing), the answer-first lead-summary rule, and the privacy rule (no living person without written consent; lineage stops before 1950) are written in docs/standards/.",
+    "Nothing is copied from earlier private research, the SAR Patriot Research System, the DAR GRS, commercial genealogy sites or Wikipedia.",
+    "Tests pass; every commit is DCO signed-off."
+  ],
+  "output": "docs/standards/citation-guide.md, docs/standards/evidence-rules.md, docs/standards/grades.json, docs/standards/transcription.md, docs/standards/prose-voice.md, docs/standards/privacy.md, tests/grades.test.ts",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "Unlicense",
+  "provenance": "generated"
+}

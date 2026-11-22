@@ -1,0 +1,34 @@
+{
+  "id": "monmouth-patriot-project-sources-002",
+  "title": "Approved-sources list: allowlist.yml schema, policy, CI gate, and the first four sources analysed",
+  "project": "monmouth-patriot-project",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": [
+    "education",
+    "genealogy",
+    "open-history",
+    "public-data"
+  ],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The Monmouth Patriot Project is a public-domain (Unlicense, data also CC0) record of the Revolutionary War patriots connected to Monmouth County, New Jersey, built towards the Battle of Monmouth's 250th anniversary on June 28, 2028. It starts from names (a master roster) and places (a namesake inventory), every claim cited to a primary source at page level. No source may be read until its entry on the approved-sources list is approved by the rights reviewer, decided for the specific copy or edition used. Depends on foundation-001.",
+  "objective": "Define sources/allowlist.yml and the policy behind it, add a CI check that fails on any content file citing a source that is not approved, and analyse Stryker's Official Register (1872) on archive.org, the NARA catalog copy of M804, USGS GNIS and HMDB for the rights reviewer's decision.",
+  "acceptanceCriteria": [
+    "AC-05: the allow-list schema records title, custodian, URL, format, rights basis for the specific copy or edition, extraction method with its accuracy baseline, status (approved, pending or rejected), reviewer and date, with a schema test.",
+    "AC-06: a test shows the CI check failing on a content file that cites a pending source.",
+    "AC-07: the policy document lists Ancestry, Fold3, FamilySearch, Newspapers.com, Find a Grave, the SAR Patriot Research System and the DAR GRS as rejected sources of copied data, each with a rejected entry, and states the lead-lookup rule.",
+    "AC-08: the four sources are analysed; the rights reviewer's decision, name and date is recorded on each, and Stryker must be approved before the roster task starts and GNIS and HMDB before the places task starts.",
+    "Nothing is copied from earlier private research, the SAR Patriot Research System, the DAR GRS, commercial genealogy sites or Wikipedia.",
+    "Tests pass; every commit is DCO signed-off."
+  ],
+  "output": "sources/allowlist.yml, docs/sources-policy.md, scripts/check-sources.ts, tests/sources.test.ts",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "Unlicense",
+  "provenance": "generated"
+}

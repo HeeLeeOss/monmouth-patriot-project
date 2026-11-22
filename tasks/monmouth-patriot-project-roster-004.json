@@ -1,0 +1,35 @@
+{
+  "id": "monmouth-patriot-project-roster-004",
+  "title": "Master roster schema and seed from Stryker's Official Register (1872): Monmouth militia regiments, every row cited to its page",
+  "project": "monmouth-patriot-project",
+  "type": "data",
+  "lane": "donated",
+  "priority": "high",
+  "domain": [
+    "education",
+    "genealogy",
+    "open-history",
+    "public-data"
+  ],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "The Monmouth Patriot Project is a public-domain (Unlicense, data also CC0) record of the Revolutionary War patriots connected to Monmouth County, New Jersey, built towards the Battle of Monmouth's 250th anniversary on June 28, 2028. It starts from names (a master roster) and places (a namesake inventory), every claim cited to a primary source at page level. The roster is a scope list of every candidate name, not proof of anything; profiles are later chosen from it. Starts only after Stryker is approved on the allow-list (sources-002).",
+  "objective": "Define data/roster.csv with a schema test and seed it from the Monmouth County militia regiments in Stryker's Official Register (1872), archive.org copy, with a JSON export.",
+  "acceptanceCriteria": [
+    "AC-11: every row of data/roster.csv has rosterId, nameAsWritten, normalizedName, unit, rank, sourceId, page, extractionMethod, enteredBy, verifiedBy and status lead, its sourceId resolves to an approved allow-list entry, and a schema test enforces it.",
+    "AC-12: the pull request carries a written attestation that the batch was read from the cited Stryker pages directly; every row was checked by a person against the page image and that person is recorded as verifiedBy (an agent's own check does not count).",
+    "Nothing is copied from earlier private research, the SAR Patriot Research System, the DAR GRS, commercial genealogy sites or Wikipedia.",
+    "Tests pass; every commit is DCO signed-off."
+  ],
+  "resources": [
+    "https://archive.org/details/officialregister00newjuoft"
+  ],
+  "output": "data/roster.csv, data/roster.json, tests/roster.test.ts, research/_attestations/roster-stryker-militia.md",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "Unlicense",
+  "provenance": "generated"
+}

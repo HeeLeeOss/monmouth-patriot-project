@@ -1,0 +1,35 @@
+{
+  "id": "monmouth-patriot-project-places-005",
+  "title": "Namesake inventory schema and first entries from USGS GNIS and HMDB, each with source and accuracy field",
+  "project": "monmouth-patriot-project",
+  "type": "data",
+  "lane": "donated",
+  "priority": "high",
+  "domain": [
+    "education",
+    "genealogy",
+    "open-history",
+    "public-data"
+  ],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The Monmouth Patriot Project is a public-domain (Unlicense, data also CC0) record of the Revolutionary War patriots connected to Monmouth County, New Jersey, built towards the Battle of Monmouth's 250th anniversary on June 28, 2028. It starts from names (a master roster) and places (a namesake inventory), every claim cited to a primary source at page level. Many patriots are known today only by a bridge, park, road or marker; the gap between the name and the person is often the story. Starts only after GNIS and HMDB are approved on the allow-list (sources-002).",
+  "objective": "Define place records for namesakes, monuments and markers with a schema test, and enter the first Monmouth County places named for Revolutionary figures from USGS GNIS and HMDB.",
+  "acceptanceCriteria": [
+    "AC-13: every place record cites its GNIS feature or HMDB marker page and carries current name, type, coordinates, the honoree as named, and accuracy set to unverified until audited; HMDB text is summarised, never copied, photographs are linked, never rehosted, and a schema test enforces the fields.",
+    "Nothing is copied from earlier private research, the SAR Patriot Research System, the DAR GRS, commercial genealogy sites or Wikipedia.",
+    "Tests pass; every commit is DCO signed-off."
+  ],
+  "resources": [
+    "https://www.usgs.gov/tools/geographic-names-information-system-gnis",
+    "https://www.hmdb.org/"
+  ],
+  "output": "src/content/places/, tests/places.test.ts",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "Unlicense",
+  "provenance": "generated"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "monmouth-patriot-project-foundation-001",
+  "title": "Repo scaffold: UNLICENSE, LICENSE-DATA, Astro + MDX, zod content schemas with sourced variants, ids and dated places, CI",
+  "project": "monmouth-patriot-project",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": [
+    "education",
+    "genealogy",
+    "open-history",
+    "public-data"
+  ],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The Monmouth Patriot Project is a public-domain (Unlicense, data also CC0) record of the Revolutionary War patriots connected to Monmouth County, New Jersey, built towards the Battle of Monmouth's 250th anniversary on June 28, 2028. It starts from names (a master roster) and places (a namesake inventory), every claim cited to a primary source at page level. Every later task builds on typed content collections that keep every sourced variant of a fact.",
+  "objective": "Create the project skeleton: UNLICENSE, LICENSE-DATA.md, an Astro + MDX static site with zod content collections for patriots, people, units, stories, places, engagements and sources, and GitHub Actions CI running build and tests on every pull request.",
+  "acceptanceCriteria": [
+    "AC-01: pnpm build passes on Node 24 LTS with every content collection empty, shown in the CI log.",
+    "AC-02: every factual field holds a list of variants (original text, parsed value, source ids, grade) with a preferred pointer and a rationale; a schema test rejects a preferred variant without a rationale when two variants disagree.",
+    "AC-03: schema tests enforce the permanent surname-given-year person id pattern, and places carry historicName, modernName, validFrom and validTo.",
+    "AC-04: UNLICENSE is at the repo root and LICENSE-DATA.md states CC0-1.0 for data and media.",
+    "Nothing is copied from earlier private research, the SAR Patriot Research System, the DAR GRS, commercial genealogy sites or Wikipedia.",
+    "Tests pass; every commit is DCO signed-off."
+  ],
+  "output": "package.json, astro.config.mjs, src/content.config.ts, tests/schemas.test.ts, UNLICENSE, LICENSE-DATA.md, .github/workflows/ci.yml",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "Unlicense",
+  "provenance": "generated"
+}
