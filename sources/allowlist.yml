@@ -1,0 +1,226 @@
+# The approved-sources list. Read docs/sources-policy.md first.
+#
+# Nothing is read, and nothing may be cited, until its entry is `approved` by the rights reviewer. A pending entry
+# carries the analysis for the reviewer's decision; the reviewer changes `status`, and adds `reviewer` and
+# `decidedOn`, in their own commit. A cited source id belongs to the entry whose id it equals or extends with a
+# hyphen: `stryker-1872-p123` belongs to `stryker-1872`. The test suite fails if any content cites a source whose
+# entry is not approved.
+
+sources:
+  # --- The first four sources, analysed for the rights reviewer ---------------------------------------------------
+
+  - id: stryker-1872
+    title: Official Register of the Officers and Men of New Jersey in the Revolutionary War (William S. Stryker, 1872)
+    custodian: Internet Archive (scan of a University of Toronto library copy)
+    url: https://archive.org/details/officialregister00newjuoft
+    format: scanned book (page images, PDF, machine OCR text)
+    rights:
+      basis: expired-copyright
+      copy: The Internet Archive item officialregister00newjuoft, its page images and its OCR text.
+      analysis: >-
+        Published in Trenton in 1872, so its copyright in the United States has long expired. A faithful scan of a
+        public-domain book adds no new copyright in the US. To confirm before approving: the item page's rights
+        statement and the absence of any added terms on this copy. We take facts (names, units, ranks, page numbers)
+        and short quotations, and cite the page; we do not republish the scan's OCR as our own text.
+    extraction:
+      method: ocr-print
+      accuracyBaseline: >-
+        The OCR text is only a finding aid. Every roster row is checked by a person against the page image and
+        recorded as verifiedBy before it is committed; a row that cannot be read with confidence is marked [?].
+    status: pending
+
+  - id: nara-m804
+    title: Revolutionary War Pension and Bounty-Land Warrant Application Files (NARA microfilm publication M804)
+    custodian: U.S. National Archives and Records Administration (NARA), catalog.archives.gov
+    url: https://catalog.archives.gov/
+    format: digitised microfilm images of case files, with catalog descriptions
+    rights:
+      basis: us-federal-work
+      copy: The page images and descriptions served by the NARA catalog itself, not copies hosted by any partner site.
+      analysis: >-
+        The files are federal records in NARA's custody; NARA describes the great majority of its holdings as having
+        no known copyright or use restrictions. Some individual documents inside a file were written by private people
+        (affidavits, letters), but they date from the 1810s–1850s and any copyright in them has long expired. To
+        confirm before approving: that the catalog entries we use carry no partner restriction and that the images
+        are served by NARA. Copies behind Fold3 or Ancestry terms are not covered by this entry.
+    extraction:
+      method: human-transcription
+      accuracyBaseline: >-
+        Handwritten pages are transcribed by a person, or a model-read draft is checked line by line by a person
+        against the image; uncertain readings are marked [?]. Only the catalog's own index fields may be imported
+        as structured data, and each is checked against the file's images before it supports a claim.
+    status: pending
+
+  - id: usgs-gnis
+    title: Geographic Names Information System (GNIS)
+    custodian: U.S. Geological Survey
+    url: https://www.usgs.gov/tools/geographic-names-information-system-gnis
+    format: downloadable database of official place names with feature classes and coordinates
+    rights:
+      basis: us-federal-work
+      copy: The GNIS data downloads and feature records published by the USGS.
+      analysis: >-
+        GNIS is produced by the U.S. Geological Survey, a federal agency, and USGS data are in the public domain in
+        the United States. To confirm before approving: the current download's own notice. GNIS records the official
+        name and location of a feature; it does not say who a place was named for or why, so a GNIS entry supports
+        only the name, type and coordinates, never the honoree.
+    extraction:
+      method: structured-import
+      accuracyBaseline: >-
+        Imported by feature id with the download's date; each feature used is checked against a current map, and the
+        honoree is left unverified until another approved source supports it.
+    status: pending
+
+  - id: hmdb
+    title: The Historical Marker Database (HMDB)
+    custodian: The Historical Marker Database (hmdb.org), a privately run site of contributed marker records
+    url: https://www.hmdb.org/
+    format: web pages per marker with contributed transcriptions, photographs, locations and links
+    rights:
+      basis: terms-of-use
+      copy: hmdb.org marker pages, used only for the fact that a marker exists, its location and a link.
+      analysis: >-
+        HMDB's pages, transcriptions and photographs are contributed by its members and are not public domain; its
+        terms limit reuse. The facts a page records (that a marker exists, where it stands, what it commemorates) are
+        not copyrightable and may be used, with a link to the page. We do not copy HMDB's transcription text or
+        photographs, and we do not scrape or bulk-download the site. To confirm before approving: HMDB's current
+        terms of use, and that linking and citing marker pages is allowed.
+    extraction:
+      method: facts-and-links-only
+      accuracyBaseline: >-
+        A marker's text is quoted only from our own photograph or reading of the marker, never from HMDB; each
+        marker used is visited or seen in a rights-cleared photograph before it receives an accuracy verdict.
+    status: pending
+
+  # --- Rejected as sources of copied data (project policy) ----------------------------------------------------------
+  # These may still be consulted by a person as leads under the lead-lookup rule; nothing is copied or cited from them.
+
+  - id: ancestry
+    title: Ancestry.com
+    custodian: Ancestry (commercial)
+    url: https://www.ancestry.com/
+    format: subscription genealogy site with indexes, record images and user trees
+    rights:
+      basis: proprietary
+      copy: Any content, index or image served by Ancestry.
+      analysis: >-
+        A commercial site whose terms forbid automated access and limit republication; its scans and indexes of
+        public-domain records carry its own restrictions. Records it hosts are used only from a free public copy
+        (NARA, the Library of Congress, archive.org) where one exists.
+    extraction:
+      method: none
+      accuracyBaseline: Nothing is extracted.
+    status: rejected
+    reviewer: Project policy in PLAN.md (owner's decision)
+    decidedOn: "2026-11-22"
+
+  - id: fold3
+    title: Fold3
+    custodian: Fold3 (commercial, part of Ancestry)
+    url: https://www.fold3.com/
+    format: subscription site of military record images and indexes
+    rights:
+      basis: proprietary
+      copy: Any content, index or image served by Fold3.
+      analysis: >-
+        A commercial site whose terms forbid automated access and limit republication. Pension and service files it
+        hosts are used only from the NARA catalog's own copy.
+    extraction:
+      method: none
+      accuracyBaseline: Nothing is extracted.
+    status: rejected
+    reviewer: Project policy in PLAN.md (owner's decision)
+    decidedOn: "2026-11-22"
+
+  - id: familysearch
+    title: FamilySearch
+    custodian: FamilySearch (free, run by The Church of Jesus Christ of Latter-day Saints)
+    url: https://www.familysearch.org/
+    format: free genealogy site with indexes, record images and a shared family tree
+    rights:
+      basis: proprietary
+      copy: Any content, index, image or tree entry served by FamilySearch.
+      analysis: >-
+        Free to use but not free to republish: its terms forbid automated access and restrict copying its images and
+        indexes, and its shared tree is compiled genealogy. Used only as a lead by a person.
+    extraction:
+      method: none
+      accuracyBaseline: Nothing is extracted.
+    status: rejected
+    reviewer: Project policy in PLAN.md (owner's decision)
+    decidedOn: "2026-11-22"
+
+  - id: newspapers-com
+    title: Newspapers.com
+    custodian: Newspapers.com (commercial, part of Ancestry)
+    url: https://www.newspapers.com/
+    format: subscription archive of newspaper page images and OCR text
+    rights:
+      basis: proprietary
+      copy: Any page image, clipping or OCR text served by Newspapers.com.
+      analysis: >-
+        A commercial site whose terms forbid automated access and limit republication. Newspapers are used from
+        Chronicling America or another free public copy where one exists.
+    extraction:
+      method: none
+      accuracyBaseline: Nothing is extracted.
+    status: rejected
+    reviewer: Project policy in PLAN.md (owner's decision)
+    decidedOn: "2026-11-22"
+
+  - id: find-a-grave
+    title: Find a Grave
+    custodian: Find a Grave (commercial, part of Ancestry)
+    url: https://www.findagrave.com/
+    format: user-contributed memorial pages with photographs and biographies
+    rights:
+      basis: proprietary
+      copy: Any memorial page, photograph or biography on Find a Grave.
+      analysis: >-
+        Contributed photographs and text belong to their contributors and the site's terms restrict reuse; its
+        biographies are compiled genealogy. A memorial id may be stored as an external link; burial facts come from
+        cemetery records or our own photographs.
+    extraction:
+      method: none
+      accuracyBaseline: Nothing is extracted.
+    status: rejected
+    reviewer: Project policy in PLAN.md (owner's decision)
+    decidedOn: "2026-11-22"
+
+  - id: sar-prs
+    title: SAR Patriot Research System
+    custodian: National Society of the Sons of the American Revolution
+    url: https://sarpatriots.sar.org/
+    format: compiled database of patriots and their descendants' applications
+    rights:
+      basis: proprietary
+      copy: Any entry, index or compiled field in the SAR Patriot Research System.
+      analysis: >-
+        A compiled database whose selection and arrangement may carry copyright and whose terms bar copying. The
+        roster is never seeded from it. A patriot number may be stored as an external link, and a person may look up
+        a name already on the roster as a lead, under the lead-lookup rule.
+    extraction:
+      method: none
+      accuracyBaseline: Nothing is extracted.
+    status: rejected
+    reviewer: Project policy in PLAN.md (owner's decision)
+    decidedOn: "2026-11-22"
+
+  - id: dar-grs
+    title: DAR Genealogical Research System (GRS)
+    custodian: National Society Daughters of the American Revolution
+    url: https://www.dar.org/
+    format: compiled database of patriots, descendants and supporting records
+    rights:
+      basis: proprietary
+      copy: Any entry, index or compiled field in the DAR GRS.
+      analysis: >-
+        A compiled database whose selection and arrangement may carry copyright and whose terms bar copying. The
+        roster is never seeded from it. An ancestor number may be stored as an external link, and a person may look up
+        a name already on the roster as a lead, under the lead-lookup rule.
+    extraction:
+      method: none
+      accuracyBaseline: Nothing is extracted.
+    status: rejected
+    reviewer: Project policy in PLAN.md (owner's decision)
+    decidedOn: "2026-11-22"
