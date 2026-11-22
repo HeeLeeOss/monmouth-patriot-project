@@ -1,0 +1,24 @@
+---
+import { getCollection } from "astro:content";
+
+const patriots = await getCollection("patriots");
+const places = await getCollection("places");
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Monmouth Patriot Project</title>
+  </head>
+  <body>
+    <main>
+      <h1>Monmouth Patriot Project</h1>
+      <p>
+        A public-domain record of the soldiers and patriots of the American Revolution connected to Monmouth County,
+        New Jersey.
+      </p>
+      <p>{patriots.length} patriot records · {places.length} place records</p>
+    </main>
+  </body>
+</html>
