@@ -10,8 +10,8 @@ be able to see exactly where we read, guessed or added something.
 - **Line breaks** follow the original. Mark a new page with `[page n]` or `[image n]`.
 - **`[ ]` for editorial notes.** Anything we add goes in square brackets: `[torn]`, `[blot]`, `[margin: …]`,
   `[signature]`, `[sic]` (sparingly), or an expansion such as `Capt[ain]`.
-- **`[?]` for an uncertain reading.** Put it straight after the doubtful word: `Shrewsb[?]ry` for a doubtful letter,
-  `Holmdel [?]` for a doubtful word. Give alternatives where useful: `Hendrickson [or Hendricks?]`.
+- **`[?]` for an uncertain reading.** Put it straight after a doubtful word: `Holmdel [?]`. For one doubtful letter, give
+  the likely letter and the mark inside the brackets: `Shrewsb[u?]ry`. Give alternatives where useful: `Hendrickson [or Hendricks?]`.
 - **`[illegible]`** for a word that cannot be read, with the approximate length if known: `[illegible, 2 words]`.
 - **Struck-through text** is kept and marked: `~~text~~`. Insertions above the line go in `^…^`.
 - **Names and numbers** are copied exactly, including obvious errors; the correction goes in the profile, with its

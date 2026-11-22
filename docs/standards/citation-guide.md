@@ -39,10 +39,15 @@ Only **[V]** statements, and **[I]** statements built on them, can support a pub
 
 Write each citation in this order. Square brackets mark the parts to fill in.
 
-- **Pension or bounty-land file (NARA M804):** [Name], pension file [file number], [state]; _Revolutionary War
+- **Pension or bounty-land file (NARA M804):** [Name], pension file [prefix and number, e.g. S.1234, W.1234,
+  R.1234 or BLWt.1234-100: S for a survivor, W for a widow, R for a rejected claim, BLWt for a bounty-land warrant], [state]; _Revolutionary War
   Pension and Bounty-Land Warrant Application Files_, NARA microfilm M804, roll [roll], image [image]; NARA catalog
   [catalog id]; read [date].
-- **Compiled service record (NARA M881):** [Name], [unit]; _Compiled Service Records of Soldiers Who Served in the
+- **NJ State Archives Revolutionary War manuscripts** (where most New Jersey militia service is recorded):
+  New Jersey State Archives, Department of Defense, Revolutionary War manuscripts, [numbered or unnumbered], [document
+  number or folder], [item]; [copy]; read [date].
+- **Compiled service record (NARA M881):** (mostly Continental units; New Jersey militia service is chiefly in the
+  state manuscripts above) [Name], [unit]; _Compiled Service Records of Soldiers Who Served in the
   American Army During the Revolutionary War_, NARA microfilm M881, roll [roll], card [card]; NARA catalog [catalog
   id]; read [date].
 - **Printed register or book:** [Author], _[Title]_ ([place], [year]), p. [page]; [copy, e.g. Internet Archive

@@ -7,7 +7,7 @@ who contribute to this project are not subjects.
 
 - **No living person** appears in the project's content, data or exports **without their written consent**. This
   covers descendants, lineage-society applicants and members, researchers, contributors, and anyone named in modern
-  paperwork. Consent is stored in `research/_permissions/` and can be withdrawn.
+  paperwork. Consent is held privately by the maintainer and is never stored in this repo, since a consent form would itself publish the person's details; the repo records only that consent exists, with its date. Consent can be withdrawn.
 - **Lineage stops before 1950.** A line of descent from a patriot is followed only through people who died before
   1950, unless every living person it would reveal has given written consent.
 - **Modern records stay out.** Lineage-society applications, membership records, and modern genealogical submissions
