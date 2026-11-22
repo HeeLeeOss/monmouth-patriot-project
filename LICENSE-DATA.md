@@ -9,8 +9,8 @@ fallback licence for places where a public-domain dedication is not valid.
 
 ## What this does not cover
 
-Third-party material keeps its own status. Every image and document record carries `rights` and `credit` fields
-saying what applies to it. Images used by written permission are marked "not public domain", are left out of the
+Third-party material keeps its own status. Every source record carries a `rights` field (and a `credit` line where
+one is owed), and every image added later will carry both. Images used by written permission are marked "not public domain", are left out of the
 bulk downloads, and may not be reused without asking their holder.
 
 The underlying historical records (pension files, registers, manuscripts) are cited, not relicensed: their own
