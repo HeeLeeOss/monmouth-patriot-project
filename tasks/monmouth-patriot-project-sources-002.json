@@ -15,7 +15,7 @@
   "urgent": false,
   "deliverable": "pr",
   "tokenEstimate": "medium",
-  "status": "open",
+  "status": "done",
   "context": "The Monmouth Patriot Project is a public-domain (Unlicense, data also CC0) record of the Revolutionary War patriots connected to Monmouth County, New Jersey, built towards the Battle of Monmouth's 250th anniversary on June 28, 2028. It starts from names (a master roster) and places (a namesake inventory), every claim cited to a primary source at page level. No source may be read until its entry on the approved-sources list is approved by the rights reviewer, decided for the specific copy or edition used. Depends on foundation-001.",
   "objective": "Define sources/allowlist.yml and the policy behind it, add a CI check that fails on any content file citing a source that is not approved, and analyse Stryker's Official Register (1872) on archive.org, the NARA catalog copy of M804, USGS GNIS and HMDB for the rights reviewer's decision.",
   "acceptanceCriteria": [

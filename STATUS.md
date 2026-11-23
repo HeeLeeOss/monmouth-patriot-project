@@ -6,10 +6,10 @@ Generated from this repository's task files and the deed receipts on the host th
 
 | State | Tasks |
 | --- | --- |
-| open | 3 |
+| open | 2 |
 | in progress | 0 |
 | review | 0 |
-| done | 2 |
+| done | 3 |
 | delivered | 0 |
 
 This project is done when: The project repository holds the scaffold, the approved-sources gate, the standards and the first roster and namesake entries, published openly, and at least one candidate partner \(the Monmouth County Historical Association, the Monmouth Battlefield State Park friends group or the SAR New Jersey ...
@@ -29,7 +29,7 @@ none
 
 ## Last sync
 
-2026-11-23T17:55:46Z (UTC), by hee-lee-oss complete
+2026-11-23T17:55:52Z (UTC), by hee-lee-oss complete
 
 ## Links
 
