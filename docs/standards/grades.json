@@ -1,0 +1,115 @@
+{
+  "proved": {
+    "label": "Proved",
+    "meaning": "A reasonably exhaustive search has been made; the evidence, direct or indirect, supports the claim; the person's identity is settled by the same-name review; and any conflicting record has been resolved with a written rationale. A plain, unqualified statement is reserved for this grade.",
+    "use": ["was", "did", "is recorded as"],
+    "avoid": ["probably", "most likely", "possibly", "may have", "is said to have", "no record supports", "is wrong"],
+    "example": "[Name] was a private in [unit] from [date] to [date]."
+  },
+  "probable": {
+    "label": "Probable",
+    "meaning": "The weight of the evidence points one way, but a gap remains: the record is later than the event, it rests on one person's memory, or identity rests on more than the name but less than proof.",
+    "use": ["probably", "most likely", "the evidence points to"],
+    "avoid": [
+      "certainly",
+      "definitely",
+      "possibly",
+      "may have",
+      "it is possible that",
+      "is said to have",
+      "according to",
+      "has not yet been checked",
+      "no record supports",
+      "is not proved",
+      "has not been found",
+      "is wrong",
+      "the records show otherwise",
+      "is disproved"
+    ],
+    "example": "[Name] probably served at the Battle of Monmouth: a comrade's pension affidavit names them there."
+  },
+  "possible": {
+    "label": "Possible",
+    "meaning": "The evidence is consistent with the claim but does not favour it over the alternatives; for example, the person was on the unit's rolls for the period but nothing shows them personally present.",
+    "use": ["possibly", "may have", "it is possible that"],
+    "avoid": [
+      "certainly",
+      "probably",
+      "most likely",
+      "the evidence points to",
+      "is said to have",
+      "according to",
+      "has not yet been checked",
+      "no record supports",
+      "is not proved",
+      "has not been found",
+      "is wrong",
+      "the records show otherwise",
+      "is disproved"
+    ],
+    "example": "[Name] may have been at the battle: their company fought there, but no record places them on the field."
+  },
+  "lead": {
+    "label": "Lead",
+    "meaning": "A claim worth checking that no primary record yet supports: a marker, a compiled genealogy, a lineage-society listing or a family tradition. It is never published as a fact.",
+    "use": ["is said to have", "according to", "has not yet been checked"],
+    "avoid": [
+      "certainly",
+      "probably",
+      "most likely",
+      "the evidence points to",
+      "possibly",
+      "may have",
+      "it is possible that",
+      "no record supports",
+      "is not proved",
+      "has not been found",
+      "is wrong",
+      "the records show otherwise",
+      "is disproved"
+    ],
+    "example": "[Name] is said to have served as a guide, according to [compiled source]; this has not yet been checked against a record."
+  },
+  "unsupported": {
+    "label": "Unsupported",
+    "meaning": "The claim has been searched for where it should appear, with a positive control, and nothing supports it. It is not disproved.",
+    "use": ["no record supports", "is not proved", "has not been found"],
+    "avoid": [
+      "certainly",
+      "probably",
+      "most likely",
+      "the evidence points to",
+      "possibly",
+      "may have",
+      "it is possible that",
+      "is said to have",
+      "according to",
+      "has not yet been checked",
+      "is wrong",
+      "the records show otherwise",
+      "is disproved"
+    ],
+    "example": "No record supports the claim that [Name] held a commission; it is not proved, and the search is logged."
+  },
+  "disproved": {
+    "label": "Disproved",
+    "meaning": "Credible records show the claim is wrong: a different person, an impossible date, or an original record that contradicts a later one. The correction is stated plainly, with its sources.",
+    "use": ["is wrong", "the records show otherwise", "is disproved"],
+    "avoid": [
+      "certainly",
+      "probably",
+      "most likely",
+      "the evidence points to",
+      "possibly",
+      "may have",
+      "it is possible that",
+      "is said to have",
+      "according to",
+      "has not yet been checked",
+      "no record supports",
+      "is not proved",
+      "has not been found"
+    ],
+    "example": "The marker's statement is wrong: the records show otherwise, placing [Name] in [other unit] that year."
+  }
+}
