@@ -15,7 +15,7 @@
   "urgent": false,
   "deliverable": "pr",
   "tokenEstimate": "medium",
-  "status": "open",
+  "status": "done",
   "context": "The Monmouth Patriot Project is a public-domain (Unlicense, data also CC0) record of the Revolutionary War patriots connected to Monmouth County, New Jersey, built towards the Battle of Monmouth's 250th anniversary on June 28, 2028. It starts from names (a master roster) and places (a namesake inventory), every claim cited to a primary source at page level. Every later task builds on typed content collections that keep every sourced variant of a fact.",
   "objective": "Create the project skeleton: UNLICENSE, LICENSE-DATA.md, an Astro + MDX static site with zod content collections for patriots, people, units, stories, places, engagements and sources, and GitHub Actions CI running build and tests on every pull request.",
   "acceptanceCriteria": [
