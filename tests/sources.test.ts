@@ -95,10 +95,16 @@ describe("the four first sources (AC-08)", () => {
     expect(byId[id]!.rights.analysis.length).toBeGreaterThan(80);
   });
 
-  it.each(["stryker-1872", "nara-m804", "usgs-gnis", "hmdb"])("%s is left pending for the rights reviewer", (id) => {
-    expect(byId[id]!.status).toBe("pending");
-    expect(byId[id]!.reviewer).toBeUndefined();
-  });
+  it.each(["stryker-1872", "nara-m804", "usgs-gnis", "hmdb"])(
+    "%s is pending, or decided by the rights reviewer (never by policy)",
+    (id) => {
+      const e = byId[id]!;
+      if (e.status === "pending") return expect(e.reviewer).toBeUndefined();
+      expect(e.policy).toBeUndefined();
+      expect(e.reviewer).toBe("Christine Carter");
+      expect(e.decidedOn).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+    },
+  );
 });
 
 describe("source check (AC-06)", () => {

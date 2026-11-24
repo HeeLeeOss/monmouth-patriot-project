@@ -29,7 +29,9 @@ sources:
       accuracyBaseline: >-
         The OCR text is only a finding aid. Every roster row is checked by a person against the page image and
         recorded as verifiedBy before it is committed; a row that cannot be read with confidence is marked [?].
-    status: pending
+    status: approved
+    reviewer: Christine Carter
+    decidedOn: "2026-11-23"
 
   - id: nara-m804
     title: Revolutionary War Pension and Bounty-Land Warrant Application Files (NARA microfilm publication M804)
@@ -54,7 +56,9 @@ sources:
         Handwritten pages are transcribed by a person, or a model-read draft is checked line by line by a person
         against the image; uncertain readings are marked [?]. Only the catalog's own index fields may be imported
         as structured data, and each is checked against the file's images before it supports a claim.
-    status: pending
+    status: approved
+    reviewer: Christine Carter
+    decidedOn: "2026-11-23"
 
   - id: usgs-gnis
     title: Geographic Names Information System (GNIS)
@@ -75,7 +79,9 @@ sources:
       accuracyBaseline: >-
         Imported by feature id with the download's date; each feature used is checked against a current map, and the
         honoree is left unverified until another approved source supports it.
-    status: pending
+    status: approved
+    reviewer: Christine Carter
+    decidedOn: "2026-11-23"
 
   - id: hmdb
     title: The Historical Marker Database (HMDB)
@@ -86,17 +92,20 @@ sources:
       basis: terms-of-use
       copy: hmdb.org marker pages, used only for the fact that a marker exists, its location and a link.
       analysis: >-
-        HMDB's pages, transcriptions and photographs are contributed by its members and are not public domain; its
-        terms limit reuse. The facts a page records (that a marker exists, where it stands, what it commemorates) are
-        not copyrightable and may be used, with a link to the page. We do not copy HMDB's transcription text or
-        photographs, and we do not scrape or bulk-download the site. To confirm before approving: HMDB's current
-        terms of use, and that linking and citing marker pages is allowed.
+        HMDB's pages, transcriptions and photographs are contributed by its members and are not public domain.
+        Its copyright page (read 2026-11-24) allows copying only with attribution and bans commercial use without
+        written permission, which is incompatible with this project's Unlicense/CC0 data, so nothing from HMDB is
+        copied: no transcription text and no photographs. The same page says linking is not copying and is
+        encouraged. The facts a page records (that a marker exists, where it stands, what it commemorates) are not
+        copyrightable and are used with a link to the page.
     extraction:
       method: facts-and-links-only
       accuracyBaseline: >-
         A marker's text is quoted only from our own photograph or reading of the marker, never from HMDB; each
         marker used is visited or seen in a rights-cleared photograph before it receives an accuracy verdict.
-    status: pending
+    status: approved
+    reviewer: Christine Carter
+    decidedOn: "2026-11-24"
 
   # --- Rejected as sources of copied data (project policy) ----------------------------------------------------------
   # These may still be consulted by a person as leads under the lead-lookup rule; nothing is copied or cited from them.
