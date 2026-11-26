@@ -9,8 +9,10 @@ policy; [`sources/allowlist.yml`](../sources/allowlist.yml) is the list it gover
    format; the **rights basis for the specific copy or edition** used; the **extraction method** and its accuracy
    baseline; and a **status**: `approved`, `pending` or `rejected`.
 2. **Only the rights reviewer approves.** An entry stays `pending` until the rights reviewer (named in the project
-   plan) decides it, and records their name and the date (`reviewer`, `decidedOn`) in their own commit. Nobody else
-   approves, and an automated tool never changes a status. The schema refuses an approval without a reviewer.
+   plan) decides it, and records their name and the date (`reviewer`, `decidedOn`) in their own commit. A reviewer
+   without a GitHub account may have the maintainer record the decision for them: the commit then says the decision
+   is the reviewer's, recorded at their request, and carries a `Reviewed-by:` line naming them. Nobody else approves,
+   and an automated tool never decides a status. The schema refuses an approval without a reviewer.
 3. **Rejections by project policy are labelled as such.** The seven rejections below were set by the project's own
    plan and task, not by a reviewer's decision, so their entries record `policy` (where that policy is) instead of
    `reviewer`. The rights reviewer may confirm them in their own commit, and may reject further sources.
