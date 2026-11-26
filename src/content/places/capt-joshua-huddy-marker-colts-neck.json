@@ -8,7 +8,7 @@
         "sourceIds": [
           "hmdb--m76469"
         ],
-        "grade": "probable"
+        "grade": "lead"
       }
     ]
   },
@@ -19,7 +19,7 @@
         "sourceIds": [
           "hmdb--m76469"
         ],
-        "grade": "probable"
+        "grade": "lead"
       }
     ]
   },
@@ -31,7 +31,7 @@
         "sourceIds": [
           "hmdb--m76469"
         ],
-        "grade": "probable"
+        "grade": "lead"
       }
     ]
   },
@@ -55,21 +55,11 @@
     "variants": [
       {
         "text": "Capt. Joshua Huddy",
+        "value": "Joshua Huddy",
         "sourceIds": [
           "hmdb--m76469"
         ],
         "grade": "lead"
-      }
-    ]
-  },
-  "namedBy": {
-    "variants": [
-      {
-        "text": "the citizens of Colts Neck",
-        "sourceIds": [
-          "hmdb--m76469"
-        ],
-        "grade": "probable"
       }
     ]
   },
@@ -81,7 +71,7 @@
         "sourceIds": [
           "hmdb--m76469"
         ],
-        "grade": "probable"
+        "grade": "lead"
       }
     ]
   },

@@ -8,14 +8,14 @@
         "sourceIds": [
           "hmdb--m312459"
         ],
-        "grade": "probable"
+        "grade": "lead"
       },
       {
         "text": "Monmouth Battle Monument",
         "sourceIds": [
           "hmdb--m53132"
         ],
-        "grade": "probable"
+        "grade": "lead"
       }
     ],
     "preferred": 0,
@@ -28,14 +28,14 @@
         "sourceIds": [
           "hmdb--m312459"
         ],
-        "grade": "probable"
+        "grade": "lead"
       },
       {
         "text": "Monmouth Battle Monument",
         "sourceIds": [
           "hmdb--m53132"
         ],
-        "grade": "probable"
+        "grade": "lead"
       }
     ],
     "preferred": 0,
@@ -49,7 +49,7 @@
         "sourceIds": [
           "hmdb--m312459"
         ],
-        "grade": "probable"
+        "grade": "lead"
       }
     ]
   },
@@ -85,7 +85,8 @@
   "honoree": {
     "variants": [
       {
-        "text": "Battle of Monmouth",
+        "text": "Battle of Monmouth Monument",
+        "value": "Battle of Monmouth",
         "sourceIds": [
           "hmdb--m312459"
         ],
@@ -101,7 +102,7 @@
         "sourceIds": [
           "hmdb--m312459"
         ],
-        "grade": "probable"
+        "grade": "lead"
       }
     ]
   },

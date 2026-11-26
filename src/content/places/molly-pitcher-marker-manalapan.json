@@ -8,7 +8,7 @@
         "sourceIds": [
           "hmdb--m38842"
         ],
-        "grade": "probable"
+        "grade": "lead"
       }
     ]
   },
@@ -19,7 +19,7 @@
         "sourceIds": [
           "hmdb--m38842"
         ],
-        "grade": "probable"
+        "grade": "lead"
       }
     ]
   },
@@ -44,6 +44,7 @@
     "variants": [
       {
         "text": "Molly Pitcher",
+        "value": "Molly Pitcher",
         "sourceIds": [
           "hmdb--m38842"
         ],

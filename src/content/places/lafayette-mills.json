@@ -8,7 +8,7 @@
         "sourceIds": [
           "usgs-gnis--f877624"
         ],
-        "grade": "proved"
+        "grade": "lead"
       }
     ]
   },
@@ -30,8 +30,8 @@
       {
         "text": "401827N 0741815W",
         "value": {
-          "lat": 40.3075,
-          "lon": -74.304167
+          "lat": 40.3076097,
+          "lon": -74.3040358
         },
         "sourceIds": [
           "usgs-gnis--f877624"
@@ -43,7 +43,8 @@
   "honoree": {
     "variants": [
       {
-        "text": "Lafayette",
+        "text": "Lafayette Mills",
+        "value": "Lafayette",
         "sourceIds": [
           "usgs-gnis--f877624"
         ],

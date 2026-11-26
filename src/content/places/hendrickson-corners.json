@@ -8,7 +8,7 @@
         "sourceIds": [
           "usgs-gnis--f877047"
         ],
-        "grade": "proved"
+        "grade": "lead"
       }
     ]
   },
@@ -30,8 +30,8 @@
       {
         "text": "402439N 0740812W",
         "value": {
-          "lat": 40.410833,
-          "lon": -74.136667
+          "lat": 40.4109415,
+          "lon": -74.136531
         },
         "sourceIds": [
           "usgs-gnis--f877047"
@@ -43,7 +43,8 @@
   "honoree": {
     "variants": [
       {
-        "text": "Hendrickson",
+        "text": "Hendrickson Corners",
+        "value": "Hendrickson",
         "sourceIds": [
           "usgs-gnis--f877047"
         ],

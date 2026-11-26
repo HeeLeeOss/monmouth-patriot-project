@@ -4,22 +4,22 @@
   "historicName": {
     "variants": [
       {
-        "text": "Mary \"Molly\" Hays",
+        "text": "Mary “Molly” Hays",
         "sourceIds": [
           "hmdb--m6187"
         ],
-        "grade": "probable"
+        "grade": "lead"
       }
     ]
   },
   "modernName": {
     "variants": [
       {
-        "text": "Mary \"Molly\" Hays",
+        "text": "Mary “Molly” Hays",
         "sourceIds": [
           "hmdb--m6187"
         ],
-        "grade": "probable"
+        "grade": "lead"
       }
     ]
   },
@@ -43,22 +43,12 @@
   "honoree": {
     "variants": [
       {
-        "text": "Mary \"Molly\" Hays",
+        "text": "Mary “Molly” Hays",
+        "value": "Mary Hays",
         "sourceIds": [
           "hmdb--m6187"
         ],
         "grade": "lead"
-      }
-    ]
-  },
-  "namedBy": {
-    "variants": [
-      {
-        "text": "Department of Environmental Protection",
-        "sourceIds": [
-          "hmdb--m6187"
-        ],
-        "grade": "probable"
       }
     ]
   },

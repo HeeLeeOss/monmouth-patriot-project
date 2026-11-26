@@ -8,7 +8,7 @@
         "sourceIds": [
           "hmdb--m15626"
         ],
-        "grade": "probable"
+        "grade": "lead"
       }
     ]
   },
@@ -19,7 +19,7 @@
         "sourceIds": [
           "hmdb--m15626"
         ],
-        "grade": "probable"
+        "grade": "lead"
       }
     ]
   },
@@ -43,7 +43,8 @@
   "honoree": {
     "variants": [
       {
-        "text": "Captain Joshua Huddy",
+        "text": "Captain Joshua Huddy's Homestead",
+        "value": "Joshua Huddy",
         "sourceIds": [
           "hmdb--m15626"
         ],

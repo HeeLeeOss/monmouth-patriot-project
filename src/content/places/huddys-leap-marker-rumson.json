@@ -4,22 +4,22 @@
   "historicName": {
     "variants": [
       {
-        "text": "Huddy's Leap",
+        "text": "Huddy’s Leap",
         "sourceIds": [
           "hmdb--m54429"
         ],
-        "grade": "probable"
+        "grade": "lead"
       }
     ]
   },
   "modernName": {
     "variants": [
       {
-        "text": "Huddy's Leap",
+        "text": "Huddy’s Leap",
         "sourceIds": [
           "hmdb--m54429"
         ],
-        "grade": "probable"
+        "grade": "lead"
       }
     ]
   },
@@ -31,7 +31,7 @@
         "sourceIds": [
           "hmdb--m54429"
         ],
-        "grade": "probable"
+        "grade": "lead"
       }
     ]
   },
@@ -54,22 +54,12 @@
   "honoree": {
     "variants": [
       {
-        "text": "Huddy",
+        "text": "Huddy’s Leap",
+        "value": "Joshua Huddy",
         "sourceIds": [
           "hmdb--m54429"
         ],
         "grade": "lead"
-      }
-    ]
-  },
-  "namedBy": {
-    "variants": [
-      {
-        "text": "Rumson Improvement Association",
-        "sourceIds": [
-          "hmdb--m54429"
-        ],
-        "grade": "probable"
       }
     ]
   },
@@ -81,7 +71,7 @@
         "sourceIds": [
           "hmdb--m54429"
         ],
-        "grade": "probable"
+        "grade": "lead"
       }
     ]
   },

@@ -8,7 +8,7 @@
         "sourceIds": [
           "hmdb--m5657"
         ],
-        "grade": "probable"
+        "grade": "lead"
       }
     ]
   },
@@ -19,7 +19,7 @@
         "sourceIds": [
           "hmdb--m5657"
         ],
-        "grade": "probable"
+        "grade": "lead"
       }
     ]
   },
@@ -43,22 +43,12 @@
   "honoree": {
     "variants": [
       {
-        "text": "Captain Joshua Huddy",
+        "text": "Captain Joshua Huddy — Prisoner of War",
+        "value": "Joshua Huddy",
         "sourceIds": [
           "hmdb--m5657"
         ],
         "grade": "lead"
-      }
-    ]
-  },
-  "namedBy": {
-    "variants": [
-      {
-        "text": "Sons of the Revolution in New Jersey",
-        "sourceIds": [
-          "hmdb--m5657"
-        ],
-        "grade": "probable"
       }
     ]
   },

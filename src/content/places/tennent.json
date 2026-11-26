@@ -8,7 +8,7 @@
         "sourceIds": [
           "usgs-gnis--f881132"
         ],
-        "grade": "proved"
+        "grade": "lead"
       }
     ]
   },
@@ -30,8 +30,8 @@
       {
         "text": "401646N 0742004W",
         "value": {
-          "lat": 40.279444,
-          "lon": -74.334444
+          "lat": 40.2795546,
+          "lon": -74.3343145
         },
         "sourceIds": [
           "usgs-gnis--f881132"
@@ -44,6 +44,7 @@
     "variants": [
       {
         "text": "Tennent",
+        "value": "Tennent",
         "sourceIds": [
           "usgs-gnis--f881132"
         ],

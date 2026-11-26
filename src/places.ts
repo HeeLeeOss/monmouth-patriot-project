@@ -8,6 +8,15 @@ const LISTING = /^(?:usgs-gnis--f|hmdb--m)(\d+)$/;
 
 export const isListing = (sourceId: string): boolean => LISTING.test(sourceId);
 
+/** The allow-list entry a citation belongs to: the id itself, or the part before `--`. */
+const entryOf = (sourceId: string): string => sourceId.split("--")[0]!;
+
+/** Any citation of HMDB, in whatever form: what a marker (or a contributor's copy of it) says. */
+export const isMarkerEvidence = (sourceId: string): boolean => entryOf(sourceId) === "hmdb";
+
+/** Any citation of GNIS, in whatever form: an official current name, which says nothing of whom it honours. */
+export const isNameEvidence = (sourceId: string): boolean => entryOf(sourceId) === "usgs-gnis";
+
 /** The page a listing citation was read from, or undefined for any other citation. */
 export const citationUrl = (sourceId: string): string | undefined => {
   const m = LISTING.exec(sourceId);

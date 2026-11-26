@@ -8,7 +8,7 @@
         "sourceIds": [
           "hmdb--m201127"
         ],
-        "grade": "probable"
+        "grade": "lead"
       }
     ]
   },
@@ -19,22 +19,11 @@
         "sourceIds": [
           "hmdb--m201127"
         ],
-        "grade": "probable"
+        "grade": "lead"
       }
     ]
   },
-  "validFrom": {
-    "variants": [
-      {
-        "text": "1927",
-        "value": "1927",
-        "sourceIds": [
-          "hmdb--m201127"
-        ],
-        "grade": "probable"
-      }
-    ]
-  },
+  "validFrom": null,
   "validTo": null,
   "coordinates": {
     "variants": [
@@ -55,6 +44,7 @@
     "variants": [
       {
         "text": "Captain Samuel Allen",
+        "value": "Samuel Allen",
         "sourceIds": [
           "hmdb--m201127"
         ],
@@ -62,32 +52,9 @@
       }
     ]
   },
-  "namedBy": {
-    "variants": [
-      {
-        "text": "Governor William Livingston Chapter Daughters of the American Revolution (DAR)",
-        "sourceIds": [
-          "hmdb--m201127"
-        ],
-        "grade": "probable"
-      }
-    ]
-  },
-  "namedOn": {
-    "variants": [
-      {
-        "text": "1927",
-        "value": "1927",
-        "sourceIds": [
-          "hmdb--m201127"
-        ],
-        "grade": "probable"
-      }
-    ]
-  },
   "sourceIds": [
     "hmdb--m201127"
   ],
-  "summary": "According to HMDB, the Governor William Livingston Chapter of the DAR erected this memorial to Captain Samuel Allen in 1927 on Mariners Bend (Route 70) in Brielle.",
+  "summary": "According to HMDB, this monument to Captain Samuel Allen on Mariners Bend (Route 70) in Brielle was put up by his descendants, and its tablet was added by the Governor William Livingston Chapter of the DAR in 1927. When the monument itself went up has not yet been checked.",
   "accuracy": "unverified"
 }
