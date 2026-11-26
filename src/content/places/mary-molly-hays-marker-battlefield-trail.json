@@ -1,0 +1,70 @@
+{
+  "id": "mary-molly-hays-marker-battlefield-trail",
+  "type": "marker",
+  "historicName": {
+    "variants": [
+      {
+        "text": "Mary \"Molly\" Hays",
+        "sourceIds": [
+          "hmdb--m6187"
+        ],
+        "grade": "probable"
+      }
+    ]
+  },
+  "modernName": {
+    "variants": [
+      {
+        "text": "Mary \"Molly\" Hays",
+        "sourceIds": [
+          "hmdb--m6187"
+        ],
+        "grade": "probable"
+      }
+    ]
+  },
+  "validFrom": null,
+  "validTo": null,
+  "coordinates": {
+    "variants": [
+      {
+        "text": "40° 16.856′ N, 74° 19.012′ W",
+        "value": {
+          "lat": 40.280933,
+          "lon": -74.316867
+        },
+        "sourceIds": [
+          "hmdb--m6187"
+        ],
+        "grade": "probable"
+      }
+    ]
+  },
+  "honoree": {
+    "variants": [
+      {
+        "text": "Mary \"Molly\" Hays",
+        "sourceIds": [
+          "hmdb--m6187"
+        ],
+        "grade": "lead"
+      }
+    ]
+  },
+  "namedBy": {
+    "variants": [
+      {
+        "text": "Department of Environmental Protection",
+        "sourceIds": [
+          "hmdb--m6187"
+        ],
+        "grade": "probable"
+      }
+    ]
+  },
+  "sourceIds": [
+    "hmdb--m6187"
+  ],
+  "summary": "According to HMDB, the state Department of Environmental Protection placed this marker naming Mary Hays on the battlefield hiking trail off County Road 522, near Englishtown. Her identity with the Molly Pitcher of the legend is contested and has not yet been checked.",
+  "accuracy": "unverified"
+}

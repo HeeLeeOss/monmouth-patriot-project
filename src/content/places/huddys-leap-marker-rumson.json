@@ -1,0 +1,93 @@
+{
+  "id": "huddys-leap-marker-rumson",
+  "type": "marker",
+  "historicName": {
+    "variants": [
+      {
+        "text": "Huddy's Leap",
+        "sourceIds": [
+          "hmdb--m54429"
+        ],
+        "grade": "probable"
+      }
+    ]
+  },
+  "modernName": {
+    "variants": [
+      {
+        "text": "Huddy's Leap",
+        "sourceIds": [
+          "hmdb--m54429"
+        ],
+        "grade": "probable"
+      }
+    ]
+  },
+  "validFrom": {
+    "variants": [
+      {
+        "text": "1957",
+        "value": "1957",
+        "sourceIds": [
+          "hmdb--m54429"
+        ],
+        "grade": "probable"
+      }
+    ]
+  },
+  "validTo": null,
+  "coordinates": {
+    "variants": [
+      {
+        "text": "40° 21.921′ N, 73° 58.63′ W",
+        "value": {
+          "lat": 40.36535,
+          "lon": -73.977167
+        },
+        "sourceIds": [
+          "hmdb--m54429"
+        ],
+        "grade": "probable"
+      }
+    ]
+  },
+  "honoree": {
+    "variants": [
+      {
+        "text": "Huddy",
+        "sourceIds": [
+          "hmdb--m54429"
+        ],
+        "grade": "lead"
+      }
+    ]
+  },
+  "namedBy": {
+    "variants": [
+      {
+        "text": "Rumson Improvement Association",
+        "sourceIds": [
+          "hmdb--m54429"
+        ],
+        "grade": "probable"
+      }
+    ]
+  },
+  "namedOn": {
+    "variants": [
+      {
+        "text": "1957",
+        "value": "1957",
+        "sourceIds": [
+          "hmdb--m54429"
+        ],
+        "grade": "probable"
+      }
+    ]
+  },
+  "sourceIds": [
+    "hmdb--m54429"
+  ],
+  "summary": "According to HMDB, the Rumson Improvement Association erected this marker in 1957 in West Park, on the Shrewsbury River shore at Rumson Road and Packer Avenue, Rumson. The event its name refers to has not yet been checked against a primary record.",
+  "accuracy": "unverified"
+}

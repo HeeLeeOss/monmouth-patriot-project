@@ -1,0 +1,93 @@
+{
+  "id": "molly-pitcher-memorial-visitor-center",
+  "type": "monument",
+  "historicName": {
+    "variants": [
+      {
+        "text": "Molly Pitcher",
+        "sourceIds": [
+          "hmdb--m7261"
+        ],
+        "grade": "probable"
+      }
+    ]
+  },
+  "modernName": {
+    "variants": [
+      {
+        "text": "Molly Pitcher",
+        "sourceIds": [
+          "hmdb--m7261"
+        ],
+        "grade": "probable"
+      }
+    ]
+  },
+  "validFrom": {
+    "variants": [
+      {
+        "text": "1978",
+        "value": "1978",
+        "sourceIds": [
+          "hmdb--m7261"
+        ],
+        "grade": "probable"
+      }
+    ]
+  },
+  "validTo": null,
+  "coordinates": {
+    "variants": [
+      {
+        "text": "40° 15.823′ N, 74° 19.151′ W",
+        "value": {
+          "lat": 40.263717,
+          "lon": -74.319183
+        },
+        "sourceIds": [
+          "hmdb--m7261"
+        ],
+        "grade": "probable"
+      }
+    ]
+  },
+  "honoree": {
+    "variants": [
+      {
+        "text": "Molly Pitcher",
+        "sourceIds": [
+          "hmdb--m7261"
+        ],
+        "grade": "lead"
+      }
+    ]
+  },
+  "namedBy": {
+    "variants": [
+      {
+        "text": "Historical Societies of Monmouth County, N.J., D.A.R., Monmouth County Heritage Committee, and friends",
+        "sourceIds": [
+          "hmdb--m7261"
+        ],
+        "grade": "probable"
+      }
+    ]
+  },
+  "namedOn": {
+    "variants": [
+      {
+        "text": "1978",
+        "value": "1978",
+        "sourceIds": [
+          "hmdb--m7261"
+        ],
+        "grade": "probable"
+      }
+    ]
+  },
+  "sourceIds": [
+    "hmdb--m7261"
+  ],
+  "summary": "According to HMDB, Monmouth County historical societies, the DAR, the Monmouth County Heritage Committee and friends erected this Molly Pitcher memorial in 1978, behind the visitor center of Monmouth Battlefield State Park in Manalapan Township.",
+  "accuracy": "unverified"
+}

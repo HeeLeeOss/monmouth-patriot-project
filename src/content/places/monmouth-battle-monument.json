@@ -1,0 +1,114 @@
+{
+  "id": "monmouth-battle-monument",
+  "type": "monument",
+  "historicName": {
+    "variants": [
+      {
+        "text": "Battle of Monmouth Monument",
+        "sourceIds": [
+          "hmdb--m312459"
+        ],
+        "grade": "probable"
+      },
+      {
+        "text": "Monmouth Battle Monument",
+        "sourceIds": [
+          "hmdb--m53132"
+        ],
+        "grade": "probable"
+      }
+    ],
+    "preferred": 0,
+    "rationale": "Both HMDB records name the same monument; 312459 is HMDB's record of the monument itself, so its title is used."
+  },
+  "modernName": {
+    "variants": [
+      {
+        "text": "Battle of Monmouth Monument",
+        "sourceIds": [
+          "hmdb--m312459"
+        ],
+        "grade": "probable"
+      },
+      {
+        "text": "Monmouth Battle Monument",
+        "sourceIds": [
+          "hmdb--m53132"
+        ],
+        "grade": "probable"
+      }
+    ],
+    "preferred": 0,
+    "rationale": "Both HMDB records name the same monument; 312459 is HMDB's record of the monument itself, so its title is used."
+  },
+  "validFrom": {
+    "variants": [
+      {
+        "text": "Nov. 13, 1884",
+        "value": "1884-11-13",
+        "sourceIds": [
+          "hmdb--m312459"
+        ],
+        "grade": "probable"
+      }
+    ]
+  },
+  "validTo": null,
+  "coordinates": {
+    "variants": [
+      {
+        "text": "40° 15.812′ N, 74° 16.667′ W",
+        "value": {
+          "lat": 40.263533,
+          "lon": -74.277783
+        },
+        "sourceIds": [
+          "hmdb--m312459"
+        ],
+        "grade": "probable"
+      },
+      {
+        "text": "40° 15.796′ N, 74° 16.681′ W",
+        "value": {
+          "lat": 40.263267,
+          "lon": -74.278017
+        },
+        "sourceIds": [
+          "hmdb--m53132"
+        ],
+        "grade": "probable"
+      }
+    ],
+    "preferred": 0,
+    "rationale": "The two HMDB records are about 35 metres apart; 312459 is the record of the monument itself, 53132 of its marker."
+  },
+  "honoree": {
+    "variants": [
+      {
+        "text": "Battle of Monmouth",
+        "sourceIds": [
+          "hmdb--m312459"
+        ],
+        "grade": "lead"
+      }
+    ]
+  },
+  "namedOn": {
+    "variants": [
+      {
+        "text": "Nov. 13, 1884",
+        "value": "1884-11-13",
+        "sourceIds": [
+          "hmdb--m312459"
+        ],
+        "grade": "probable"
+      }
+    ]
+  },
+  "sourceIds": [
+    "hmdb--m312459",
+    "hmdb--m53132"
+  ],
+  "summary": "According to HMDB, the Battle of Monmouth monument stands where Monument, Court and Schanck Streets meet in Freehold, and was dedicated on November 13, 1884; one of its relief panels shows Molly Pitcher loading a cannon. The plan's seed list names Molly Pitcher on this monument.",
+  "accuracy": "unverified"
+}

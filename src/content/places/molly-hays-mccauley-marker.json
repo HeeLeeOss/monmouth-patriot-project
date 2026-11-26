@@ -1,0 +1,59 @@
+{
+  "id": "molly-hays-mccauley-marker",
+  "type": "marker",
+  "historicName": {
+    "variants": [
+      {
+        "text": "Molly Hays McCauley",
+        "sourceIds": [
+          "hmdb--m38843"
+        ],
+        "grade": "probable"
+      }
+    ]
+  },
+  "modernName": {
+    "variants": [
+      {
+        "text": "Molly Hays McCauley",
+        "sourceIds": [
+          "hmdb--m38843"
+        ],
+        "grade": "probable"
+      }
+    ]
+  },
+  "validFrom": null,
+  "validTo": null,
+  "coordinates": {
+    "variants": [
+      {
+        "text": "40° 16.855′ N, 74° 19.114′ W",
+        "value": {
+          "lat": 40.280917,
+          "lon": -74.318567
+        },
+        "sourceIds": [
+          "hmdb--m38843"
+        ],
+        "grade": "probable"
+      }
+    ]
+  },
+  "honoree": {
+    "variants": [
+      {
+        "text": "Molly Hays McCauley",
+        "sourceIds": [
+          "hmdb--m38843"
+        ],
+        "grade": "lead"
+      }
+    ]
+  },
+  "sourceIds": [
+    "hmdb--m38843"
+  ],
+  "summary": "According to HMDB, a state marker naming Molly Hays McCauley stands on the Monmouth Battlefield hiking trail off Freehold Road (County Route 522), Manalapan Township. Her identity with the Molly Pitcher of the legend has not yet been checked.",
+  "accuracy": "unverified"
+}

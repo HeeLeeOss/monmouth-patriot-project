@@ -1,0 +1,59 @@
+{
+  "id": "tennent",
+  "type": "settlement",
+  "historicName": {
+    "variants": [
+      {
+        "text": "Tennent",
+        "sourceIds": [
+          "usgs-gnis--f881132"
+        ],
+        "grade": "proved"
+      }
+    ]
+  },
+  "modernName": {
+    "variants": [
+      {
+        "text": "Tennent",
+        "sourceIds": [
+          "usgs-gnis--f881132"
+        ],
+        "grade": "proved"
+      }
+    ]
+  },
+  "validFrom": null,
+  "validTo": null,
+  "coordinates": {
+    "variants": [
+      {
+        "text": "401646N 0742004W",
+        "value": {
+          "lat": 40.279444,
+          "lon": -74.334444
+        },
+        "sourceIds": [
+          "usgs-gnis--f881132"
+        ],
+        "grade": "probable"
+      }
+    ]
+  },
+  "honoree": {
+    "variants": [
+      {
+        "text": "Tennent",
+        "sourceIds": [
+          "usgs-gnis--f881132"
+        ],
+        "grade": "lead"
+      }
+    ]
+  },
+  "sourceIds": [
+    "usgs-gnis--f881132"
+  ],
+  "summary": "GNIS lists Tennent as a populated place in Monmouth County, on the Freehold map. GNIS gives no note on the name's origin; that it is named for the Tennent family or Old Tennent Church has not yet been checked.",
+  "accuracy": "unverified"
+}

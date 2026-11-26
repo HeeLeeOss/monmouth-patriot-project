@@ -1,0 +1,59 @@
+{
+  "id": "captain-joshua-huddys-homestead-marker",
+  "type": "marker",
+  "historicName": {
+    "variants": [
+      {
+        "text": "Captain Joshua Huddy's Homestead",
+        "sourceIds": [
+          "hmdb--m15626"
+        ],
+        "grade": "probable"
+      }
+    ]
+  },
+  "modernName": {
+    "variants": [
+      {
+        "text": "Captain Joshua Huddy's Homestead",
+        "sourceIds": [
+          "hmdb--m15626"
+        ],
+        "grade": "probable"
+      }
+    ]
+  },
+  "validFrom": null,
+  "validTo": null,
+  "coordinates": {
+    "variants": [
+      {
+        "text": "40° 17.267′ N, 74° 10.55′ W",
+        "value": {
+          "lat": 40.287783,
+          "lon": -74.175833
+        },
+        "sourceIds": [
+          "hmdb--m15626"
+        ],
+        "grade": "probable"
+      }
+    ]
+  },
+  "honoree": {
+    "variants": [
+      {
+        "text": "Captain Joshua Huddy",
+        "sourceIds": [
+          "hmdb--m15626"
+        ],
+        "grade": "lead"
+      }
+    ]
+  },
+  "sourceIds": [
+    "hmdb--m15626"
+  ],
+  "summary": "According to HMDB, this marker at Heyers Mill Road and County Road 537 in Colts Neck, near the Colts Neck Inn, marks the homestead of Captain Joshua Huddy. Who erected it, and when, has not yet been checked.",
+  "accuracy": "unverified"
+}

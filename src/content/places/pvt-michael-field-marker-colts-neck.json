@@ -1,0 +1,93 @@
+{
+  "id": "pvt-michael-field-marker-colts-neck",
+  "type": "marker",
+  "historicName": {
+    "variants": [
+      {
+        "text": "Pvt. Michael Field",
+        "sourceIds": [
+          "hmdb--m76329"
+        ],
+        "grade": "probable"
+      }
+    ]
+  },
+  "modernName": {
+    "variants": [
+      {
+        "text": "Pvt. Michael Field",
+        "sourceIds": [
+          "hmdb--m76329"
+        ],
+        "grade": "probable"
+      }
+    ]
+  },
+  "validFrom": {
+    "variants": [
+      {
+        "text": "1963",
+        "value": "1963",
+        "sourceIds": [
+          "hmdb--m76329"
+        ],
+        "grade": "probable"
+      }
+    ]
+  },
+  "validTo": null,
+  "coordinates": {
+    "variants": [
+      {
+        "text": "40° 18.687′ N, 74° 11.365′ W",
+        "value": {
+          "lat": 40.31145,
+          "lon": -74.189417
+        },
+        "sourceIds": [
+          "hmdb--m76329"
+        ],
+        "grade": "probable"
+      }
+    ]
+  },
+  "honoree": {
+    "variants": [
+      {
+        "text": "Pvt. Michael Field",
+        "sourceIds": [
+          "hmdb--m76329"
+        ],
+        "grade": "lead"
+      }
+    ]
+  },
+  "namedBy": {
+    "variants": [
+      {
+        "text": "Frank J. Cahir",
+        "sourceIds": [
+          "hmdb--m76329"
+        ],
+        "grade": "probable"
+      }
+    ]
+  },
+  "namedOn": {
+    "variants": [
+      {
+        "text": "1963",
+        "value": "1963",
+        "sourceIds": [
+          "hmdb--m76329"
+        ],
+        "grade": "probable"
+      }
+    ]
+  },
+  "sourceIds": [
+    "hmdb--m76329"
+  ],
+  "summary": "According to HMDB, Frank J. Cahir erected this grave marker in 1963 in Memorial Park on Heyers Mill Road, Colts Neck, for Private Michael Field, whom it records as dying on June 28, 1778, the day of the Battle of Monmouth.",
+  "accuracy": "unverified"
+}

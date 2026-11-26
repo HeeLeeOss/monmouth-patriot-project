@@ -1,0 +1,59 @@
+{
+  "id": "continental-soldiers-grave-old-tennent",
+  "type": "marker",
+  "historicName": {
+    "variants": [
+      {
+        "text": "Continental Soldier's Grave",
+        "sourceIds": [
+          "hmdb--m97083"
+        ],
+        "grade": "probable"
+      }
+    ]
+  },
+  "modernName": {
+    "variants": [
+      {
+        "text": "Continental Soldier's Grave",
+        "sourceIds": [
+          "hmdb--m97083"
+        ],
+        "grade": "probable"
+      }
+    ]
+  },
+  "validFrom": null,
+  "validTo": null,
+  "coordinates": {
+    "variants": [
+      {
+        "text": "40° 17.024′ N, 74° 19.559′ W",
+        "value": {
+          "lat": 40.283733,
+          "lon": -74.325983
+        },
+        "sourceIds": [
+          "hmdb--m97083"
+        ],
+        "grade": "probable"
+      }
+    ]
+  },
+  "honoree": {
+    "variants": [
+      {
+        "text": "Continental Soldier",
+        "sourceIds": [
+          "hmdb--m97083"
+        ],
+        "grade": "lead"
+      }
+    ]
+  },
+  "sourceIds": [
+    "hmdb--m97083"
+  ],
+  "summary": "According to HMDB, this marker for the grave of an unnamed Continental soldier stands in front of the church on Tennent Road near Craig Road, Manalapan Township. The plan's seed list names Old Tennent Church and churchyard; the soldier is unidentified.",
+  "accuracy": "unverified"
+}

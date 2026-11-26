@@ -1,0 +1,59 @@
+{
+  "id": "freneau",
+  "type": "settlement",
+  "historicName": {
+    "variants": [
+      {
+        "text": "Freneau",
+        "sourceIds": [
+          "usgs-gnis--f876512"
+        ],
+        "grade": "proved"
+      }
+    ]
+  },
+  "modernName": {
+    "variants": [
+      {
+        "text": "Freneau",
+        "sourceIds": [
+          "usgs-gnis--f876512"
+        ],
+        "grade": "proved"
+      }
+    ]
+  },
+  "validFrom": null,
+  "validTo": null,
+  "coordinates": {
+    "variants": [
+      {
+        "text": "402406N 0741416W",
+        "value": {
+          "lat": 40.401667,
+          "lon": -74.237778
+        },
+        "sourceIds": [
+          "usgs-gnis--f876512"
+        ],
+        "grade": "probable"
+      }
+    ]
+  },
+  "honoree": {
+    "variants": [
+      {
+        "text": "Freneau",
+        "sourceIds": [
+          "usgs-gnis--f876512"
+        ],
+        "grade": "lead"
+      }
+    ]
+  },
+  "sourceIds": [
+    "usgs-gnis--f876512"
+  ],
+  "summary": "GNIS lists Freneau as a populated place in Monmouth County, on the Keyport map. GNIS gives no note on the name's origin; that it honours a person named Freneau has not yet been checked.",
+  "accuracy": "unverified"
+}

@@ -1,0 +1,70 @@
+{
+  "id": "captain-joshua-huddy-monument-highlands",
+  "type": "monument",
+  "historicName": {
+    "variants": [
+      {
+        "text": "Captain Joshua Huddy — Prisoner of War",
+        "sourceIds": [
+          "hmdb--m5657"
+        ],
+        "grade": "probable"
+      }
+    ]
+  },
+  "modernName": {
+    "variants": [
+      {
+        "text": "Captain Joshua Huddy — Prisoner of War",
+        "sourceIds": [
+          "hmdb--m5657"
+        ],
+        "grade": "probable"
+      }
+    ]
+  },
+  "validFrom": null,
+  "validTo": null,
+  "coordinates": {
+    "variants": [
+      {
+        "text": "40° 24.284′ N, 73° 59.649′ W",
+        "value": {
+          "lat": 40.404733,
+          "lon": -73.99415
+        },
+        "sourceIds": [
+          "hmdb--m5657"
+        ],
+        "grade": "probable"
+      }
+    ]
+  },
+  "honoree": {
+    "variants": [
+      {
+        "text": "Captain Joshua Huddy",
+        "sourceIds": [
+          "hmdb--m5657"
+        ],
+        "grade": "lead"
+      }
+    ]
+  },
+  "namedBy": {
+    "variants": [
+      {
+        "text": "Sons of the Revolution in New Jersey",
+        "sourceIds": [
+          "hmdb--m5657"
+        ],
+        "grade": "probable"
+      }
+    ]
+  },
+  "sourceIds": [
+    "hmdb--m5657"
+  ],
+  "summary": "According to HMDB, the Sons of the Revolution in New Jersey put up this monument to Captain Joshua Huddy as a prisoner of war in the town park in Highlands, in front of the bandstand. The plan's seed list names Huddy Park in Highlands; that this park is it has not yet been checked.",
+  "accuracy": "unverified"
+}
