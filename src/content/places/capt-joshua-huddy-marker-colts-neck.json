@@ -1,0 +1,83 @@
+{
+  "id": "capt-joshua-huddy-marker-colts-neck",
+  "type": "marker",
+  "historicName": {
+    "variants": [
+      {
+        "text": "Capt. Joshua Huddy",
+        "sourceIds": [
+          "hmdb--m76469"
+        ],
+        "grade": "lead"
+      }
+    ]
+  },
+  "modernName": {
+    "variants": [
+      {
+        "text": "Capt. Joshua Huddy",
+        "sourceIds": [
+          "hmdb--m76469"
+        ],
+        "grade": "lead"
+      }
+    ]
+  },
+  "validFrom": {
+    "variants": [
+      {
+        "text": "August 27, 1977",
+        "value": "1977-08-27",
+        "sourceIds": [
+          "hmdb--m76469"
+        ],
+        "grade": "lead"
+      }
+    ]
+  },
+  "validTo": null,
+  "coordinates": {
+    "variants": [
+      {
+        "text": "40° 18.691′ N, 74° 11.364′ W",
+        "value": {
+          "lat": 40.311517,
+          "lon": -74.1894
+        },
+        "sourceIds": [
+          "hmdb--m76469"
+        ],
+        "grade": "probable"
+      }
+    ]
+  },
+  "honoree": {
+    "variants": [
+      {
+        "text": "Capt. Joshua Huddy",
+        "value": "Joshua Huddy",
+        "sourceIds": [
+          "hmdb--m76469"
+        ],
+        "grade": "lead"
+      }
+    ]
+  },
+  "namedOn": {
+    "variants": [
+      {
+        "text": "August 27, 1977",
+        "value": "1977-08-27",
+        "sourceIds": [
+          "hmdb--m76469"
+        ],
+        "grade": "lead"
+      }
+    ]
+  },
+  "sourceIds": [
+    "hmdb--m76469"
+  ],
+  "summary": "According to HMDB, the citizens of Colts Neck erected this marker to Joshua Huddy on August 27, 1977, in Memorial Park on Heyers Mill Road, Colts Neck. Not yet visited or checked against the marker itself.",
+  "accuracy": "unverified"
+}

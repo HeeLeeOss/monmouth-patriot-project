@@ -1,0 +1,60 @@
+{
+  "id": "continental-soldiers-grave-old-tennent",
+  "type": "marker",
+  "historicName": {
+    "variants": [
+      {
+        "text": "Continental Soldiers Grave",
+        "sourceIds": [
+          "hmdb--m97083"
+        ],
+        "grade": "lead"
+      }
+    ]
+  },
+  "modernName": {
+    "variants": [
+      {
+        "text": "Continental Soldiers Grave",
+        "sourceIds": [
+          "hmdb--m97083"
+        ],
+        "grade": "lead"
+      }
+    ]
+  },
+  "validFrom": null,
+  "validTo": null,
+  "coordinates": {
+    "variants": [
+      {
+        "text": "40° 17.024′ N, 74° 19.559′ W",
+        "value": {
+          "lat": 40.283733,
+          "lon": -74.325983
+        },
+        "sourceIds": [
+          "hmdb--m97083"
+        ],
+        "grade": "probable"
+      }
+    ]
+  },
+  "honoree": {
+    "variants": [
+      {
+        "text": "Continental Soldiers Grave",
+        "value": "unidentified Continental soldiers",
+        "sourceIds": [
+          "hmdb--m97083"
+        ],
+        "grade": "lead"
+      }
+    ]
+  },
+  "sourceIds": [
+    "hmdb--m97083"
+  ],
+  "summary": "According to HMDB, this marker for a shared burial place of Continental troops killed in the Battle of Monmouth stands in front of the church on Tennent Road near Craig Road, Manalapan Township. The plan's seed list names Old Tennent Church and churchyard; the soldiers are unidentified.",
+  "accuracy": "unverified"
+}

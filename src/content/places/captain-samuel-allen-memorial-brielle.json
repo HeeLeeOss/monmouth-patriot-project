@@ -1,0 +1,60 @@
+{
+  "id": "captain-samuel-allen-memorial-brielle",
+  "type": "monument",
+  "historicName": {
+    "variants": [
+      {
+        "text": "Captain Samuel Allen",
+        "sourceIds": [
+          "hmdb--m201127"
+        ],
+        "grade": "lead"
+      }
+    ]
+  },
+  "modernName": {
+    "variants": [
+      {
+        "text": "Captain Samuel Allen",
+        "sourceIds": [
+          "hmdb--m201127"
+        ],
+        "grade": "lead"
+      }
+    ]
+  },
+  "validFrom": null,
+  "validTo": null,
+  "coordinates": {
+    "variants": [
+      {
+        "text": "40° 6.225′ N, 74° 4.66′ W",
+        "value": {
+          "lat": 40.10375,
+          "lon": -74.077667
+        },
+        "sourceIds": [
+          "hmdb--m201127"
+        ],
+        "grade": "probable"
+      }
+    ]
+  },
+  "honoree": {
+    "variants": [
+      {
+        "text": "Captain Samuel Allen",
+        "value": "Samuel Allen",
+        "sourceIds": [
+          "hmdb--m201127"
+        ],
+        "grade": "lead"
+      }
+    ]
+  },
+  "sourceIds": [
+    "hmdb--m201127"
+  ],
+  "summary": "According to HMDB, this monument to Captain Samuel Allen on Mariners Bend (Route 70) in Brielle was put up by his descendants, and its tablet was added by the Governor William Livingston Chapter of the DAR in 1927. When the monument itself went up has not yet been checked.",
+  "accuracy": "unverified"
+}

@@ -1,0 +1,60 @@
+{
+  "id": "molly-pitcher-marker-manalapan",
+  "type": "marker",
+  "historicName": {
+    "variants": [
+      {
+        "text": "Molly Pitcher",
+        "sourceIds": [
+          "hmdb--m38842"
+        ],
+        "grade": "lead"
+      }
+    ]
+  },
+  "modernName": {
+    "variants": [
+      {
+        "text": "Molly Pitcher",
+        "sourceIds": [
+          "hmdb--m38842"
+        ],
+        "grade": "lead"
+      }
+    ]
+  },
+  "validFrom": null,
+  "validTo": null,
+  "coordinates": {
+    "variants": [
+      {
+        "text": "40° 16.38′ N, 74° 18.875′ W",
+        "value": {
+          "lat": 40.273,
+          "lon": -74.314583
+        },
+        "sourceIds": [
+          "hmdb--m38842"
+        ],
+        "grade": "probable"
+      }
+    ]
+  },
+  "honoree": {
+    "variants": [
+      {
+        "text": "Molly Pitcher",
+        "value": "Molly Pitcher",
+        "sourceIds": [
+          "hmdb--m38842"
+        ],
+        "grade": "lead"
+      }
+    ]
+  },
+  "sourceIds": [
+    "hmdb--m38842"
+  ],
+  "summary": "According to HMDB, a marker titled for Molly Pitcher stands in Manalapan Township. Who erected it and when, and whom it identifies as Molly Pitcher, has not yet been checked.",
+  "accuracy": "unverified"
+}

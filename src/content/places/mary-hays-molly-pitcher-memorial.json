@@ -1,0 +1,60 @@
+{
+  "id": "mary-hays-molly-pitcher-memorial",
+  "type": "marker",
+  "historicName": {
+    "variants": [
+      {
+        "text": "Mary Hays, nicknamed “Molly Pitcher\"",
+        "sourceIds": [
+          "hmdb--m196733"
+        ],
+        "grade": "lead"
+      }
+    ]
+  },
+  "modernName": {
+    "variants": [
+      {
+        "text": "Mary Hays, nicknamed “Molly Pitcher\"",
+        "sourceIds": [
+          "hmdb--m196733"
+        ],
+        "grade": "lead"
+      }
+    ]
+  },
+  "validFrom": null,
+  "validTo": null,
+  "coordinates": {
+    "variants": [
+      {
+        "text": "40° 15.674′ N, 74° 19.268′ W",
+        "value": {
+          "lat": 40.261233,
+          "lon": -74.321133
+        },
+        "sourceIds": [
+          "hmdb--m196733"
+        ],
+        "grade": "probable"
+      }
+    ]
+  },
+  "honoree": {
+    "variants": [
+      {
+        "text": "Mary Hays, nicknamed “Molly Pitcher\"",
+        "value": "Mary Hays, called Molly Pitcher",
+        "sourceIds": [
+          "hmdb--m196733"
+        ],
+        "grade": "lead"
+      }
+    ]
+  },
+  "sourceIds": [
+    "hmdb--m196733"
+  ],
+  "summary": "According to HMDB, a wayside panel on the Women's Heritage Trail naming Mary Hays as Molly Pitcher stands on Business Route 33 in Manalapan Township, placed by the state's historic preservation office. When it was placed has not yet been checked.",
+  "accuracy": "unverified"
+}

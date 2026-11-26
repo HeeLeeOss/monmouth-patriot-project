@@ -1,0 +1,60 @@
+{
+  "id": "lafayette-mills",
+  "type": "settlement",
+  "historicName": {
+    "variants": [
+      {
+        "text": "Lafayette Mills",
+        "sourceIds": [
+          "usgs-gnis--f877624"
+        ],
+        "grade": "lead"
+      }
+    ]
+  },
+  "modernName": {
+    "variants": [
+      {
+        "text": "Lafayette Mills",
+        "sourceIds": [
+          "usgs-gnis--f877624"
+        ],
+        "grade": "proved"
+      }
+    ]
+  },
+  "validFrom": null,
+  "validTo": null,
+  "coordinates": {
+    "variants": [
+      {
+        "text": "401827N 0741815W",
+        "value": {
+          "lat": 40.3076097,
+          "lon": -74.3040358
+        },
+        "sourceIds": [
+          "usgs-gnis--f877624"
+        ],
+        "grade": "probable"
+      }
+    ]
+  },
+  "honoree": {
+    "variants": [
+      {
+        "text": "Lafayette Mills",
+        "value": "Lafayette",
+        "sourceIds": [
+          "usgs-gnis--f877624"
+        ],
+        "grade": "lead"
+      }
+    ]
+  },
+  "sourceIds": [
+    "usgs-gnis--f877624"
+  ],
+  "summary": "GNIS lists Lafayette Mills as a populated place in Monmouth County, on the Freehold map. GNIS gives no note on the name's origin; that it honours a person named Lafayette has not yet been checked.",
+  "accuracy": "unverified"
+}

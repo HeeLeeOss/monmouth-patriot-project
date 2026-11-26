@@ -10,6 +10,7 @@
  * are plain values. A connection code (A–E) is a graded claim with its sources, not a value read from a record.
  */
 import { z } from "astro/zod";
+import { isListing, isMarkerEvidence, isNameEvidence } from "./places";
 
 /** The six evidence grades, strongest first. Their fixed wording lives in docs/standards. */
 export const GRADES = ["proved", "probable", "possible", "lead", "unsupported", "disproved"] as const;
@@ -19,9 +20,9 @@ export const grade = z.enum(GRADES);
 export const sourceId = z.string().regex(/^[a-z0-9][a-z0-9-]*$/, "source ids are lower-case words joined by hyphens");
 const sourceIds = z.array(sourceId).min(1, "cite at least one source");
 
-/** One reading of a fact, as one source gives it. */
+/** One reading of a fact, as one source gives it. Strict: a reading holds nothing but these four keys. */
 export const variant = <T extends z.ZodType>(value: T) =>
-  z.object({
+  z.strictObject({
     /** The text exactly as the record has it. */
     text: z.string().trim().min(1),
     /** The parsed value, when the text can be parsed. */
@@ -44,7 +45,7 @@ const disagree = (readings: Reading[]): boolean =>
 /** A factual field: every sourced variant, and the preferred one with a rationale when they disagree. */
 export const sourced = <T extends z.ZodType>(value: T) =>
   z
-    .object({
+    .strictObject({
       variants: z.array(variant(value)).min(1),
       preferred: z.number().int().min(0).optional(),
       rationale: z.string().trim().min(1).optional(),
@@ -162,20 +163,120 @@ export const ACCURACY = ["accurate", "minor error", "significant error", "unveri
 
 const coordinates = z.object({ lat: z.number().min(-90).max(90), lon: z.number().min(-180).max(180) });
 
-/** A place with dated names: historic places and modern namesakes alike. `validTo: null` means it still exists. */
-export const placeSchema = z.object({
-  id: placeId,
-  type: z.enum(PLACE_TYPES),
-  historicName: text,
-  modernName: text,
-  validFrom: date,
-  validTo: date.nullable(),
-  parents: z.array(z.object({ placeId: sourced(placeId), from: date, to: date.nullable() })).default([]),
-  coordinates: sourced(coordinates).optional(),
-  honoree: text.optional(),
-  /** The project's audit verdict on the marker or name; its evidence lives in the audit table. */
-  accuracy: z.enum(ACCURACY).optional(),
-});
+/** Grades a marker or a name alone can support: a marker is a lead, never proof (evidence rule 6). */
+const LEAD_OR_WEAKER = new Set(["lead", "unsupported", "disproved"]);
+
+/** The longest text a place field may hold: room for a name or a date, not for an inscription. */
+const PLACE_TEXT_MAX = 200;
+
+type Field = { variants: { text: string; sourceIds: string[]; grade: string }[] } | null | undefined;
+
+/**
+ * A place with dated names: historic places and modern namesakes alike. `validTo: null` means it still exists.
+ *
+ * A place with an honoree is a **namesake**, and every marker or monument is one. A namesake must cite its GNIS
+ * feature or HMDB marker page in `sourceIds`, and carry coordinates, a summary in our own words and an accuracy
+ * verdict, which stays `unverified` until a named person audits it. A namesake may have `validFrom: null` when no
+ * source dates it yet (the key is still required, so the gap is stated); any other place must be dated (AC-03).
+ *
+ * Evidence limits (evidence rule 6, and the allow-list's terms for each source):
+ * - whatever is read only from HMDB is a lead, except a contributor's coordinates;
+ * - an honoree read only from HMDB or GNIS is a lead, and so is a GNIS name offered as a historic name;
+ * - who erected a marker is never quoted from HMDB: marker text comes only from our own reading of the marker.
+ *
+ * The object and its sourced fields are strict and place texts are short, so there is nowhere for copied marker text
+ * or a rehosted photograph.
+ */
+export const placeSchema = z
+  .strictObject({
+    id: placeId,
+    type: z.enum(PLACE_TYPES),
+    historicName: text,
+    modernName: text,
+    validFrom: date.nullable(),
+    validTo: date.nullable(),
+    parents: z.array(z.object({ placeId: sourced(placeId), from: date, to: date.nullable() })).default([]),
+    coordinates: sourced(coordinates).optional(),
+    /** The person or event the place is named for, as the place or marker names them. */
+    honoree: text.optional(),
+    /** Who named, erected or dedicated it, and when, if known. */
+    namedBy: text.optional(),
+    namedOn: date.optional(),
+    /** The listings this place was read from: GNIS features (`usgs-gnis--f…`) or HMDB markers (`hmdb--m…`). */
+    sourceIds: z.array(sourceId).min(1).optional(),
+    /** What the place or marker is, in the project's own words; marker text is summarised, never copied. */
+    summary: z.string().trim().min(1).max(500).optional(),
+    /** The project's audit verdict on the marker or name; its evidence lives in the audit table. */
+    accuracy: z.enum(ACCURACY).optional(),
+    auditedBy: z.string().trim().min(1).optional(),
+    auditedOn: z
+      .string()
+      .regex(/^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$/, "an audit is dated YYYY-MM-DD")
+      .optional(),
+  })
+  .superRefine((p, ctx) => {
+    const fields: Record<string, Field> = {
+      historicName: p.historicName,
+      modernName: p.modernName,
+      validFrom: p.validFrom,
+      validTo: p.validTo,
+      coordinates: p.coordinates,
+      honoree: p.honoree,
+      namedBy: p.namedBy,
+      namedOn: p.namedOn,
+    };
+    const cap = (key: string, only: (id: string) => boolean, message: string) =>
+      fields[key]?.variants.forEach((variant, i) => {
+        if (variant.sourceIds.every(only) && !LEAD_OR_WEAKER.has(variant.grade))
+          ctx.addIssue({ code: "custom", path: [key, "variants", i, "grade"], message });
+      });
+    for (const [key, field] of Object.entries(fields)) {
+      field?.variants.forEach((variant, i) => {
+        if (variant.text.length > PLACE_TEXT_MAX)
+          ctx.addIssue({ code: "custom", path: [key, "variants", i, "text"], message: `a place field holds at most ${PLACE_TEXT_MAX} characters` });
+      });
+      if (key !== "coordinates" && key !== "honoree")
+        cap(key, isMarkerEvidence, "what is read only from HMDB is a lead until another record supports it");
+    }
+    cap(
+      "honoree",
+      (id) => isMarkerEvidence(id) || isNameEvidence(id),
+      "an honoree read only from a marker or a name is a lead until another record supports it",
+    );
+    cap("historicName", isNameEvidence, "GNIS gives the current official name; as a historic name it is a lead");
+    p.namedBy?.variants.forEach((variant, i) => {
+      if (variant.sourceIds.some(isMarkerEvidence))
+        ctx.addIssue({
+          code: "custom",
+          path: ["namedBy", "variants", i, "sourceIds"],
+          message: "who erected a marker is quoted from our own reading of the marker, never from HMDB",
+        });
+    });
+
+    const audited = p.auditedBy !== undefined || p.auditedOn !== undefined;
+    if (p.accuracy !== undefined && p.accuracy !== "unverified" && (p.auditedBy === undefined || p.auditedOn === undefined)) {
+      ctx.addIssue({ code: "custom", path: ["accuracy"], message: "an accuracy verdict needs auditedBy and auditedOn" });
+    }
+    if ((p.accuracy === undefined || p.accuracy === "unverified") && audited) {
+      ctx.addIssue({ code: "custom", path: ["auditedBy"], message: "an audit records its verdict in accuracy" });
+    }
+    const namesake = p.honoree !== undefined || p.type === "marker" || p.type === "monument";
+    if (!namesake) {
+      if (p.validFrom === null)
+        ctx.addIssue({ code: "custom", path: ["validFrom"], message: "a place without an honoree must be dated" });
+      return;
+    }
+    for (const key of ["honoree", "coordinates", "accuracy", "sourceIds", "summary"] as const) {
+      if (p[key] === undefined) ctx.addIssue({ code: "custom", path: [key], message: `a namesake needs ${key}` });
+    }
+    if (p.sourceIds !== undefined && !p.sourceIds.some(isListing)) {
+      ctx.addIssue({
+        code: "custom",
+        path: ["sourceIds"],
+        message: "a namesake cites its GNIS feature (usgs-gnis--f<id>) or HMDB marker page (hmdb--m<number>)",
+      });
+    }
+  });
 
 export const UNIT_KINDS = ["continental", "state-troops", "militia", "levies"] as const;
 
